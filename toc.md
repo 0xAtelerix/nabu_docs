@@ -13,8 +13,8 @@
 ## ✅ The Solution
 
 * [The Solution: Nabu](solution.md)
-  * [Strategy flywheel](flywheel.md)
-  * [Ecosystem & economics](ecosystems.md)
+* [Strategy flywheel](flywheel.md)
+* [Ecosystem & economics](ecosystems.md)
 
 ## 🛠️ Nabu technology
 
