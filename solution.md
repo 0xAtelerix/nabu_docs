@@ -23,6 +23,9 @@ layout:
 
 # The Solution: Nabu
 
+Nabu is built as an execution‑grade system that turns strategy ideas into verifiable, policy‑bound automation across crypto venues. This section details core components to the solutions such as 
+the strategy design safeguards, the strategy lifecycle.
+
 ## Why the Pelagos Strategy Language?
 
 [PSL](glossary.md#psl), the Pelagos Strategy Language, is a constrained, verifiable, Domain-Specific Language (DSL) that gives the LLM fast, objective feedback about what is correct vs. invalid. Unlike general-purpose programming languages, PSL is intentionally not Turing-complete: it reduces complexity, improves determinism, and enables language-level safeguards without forcing rigid templates.
@@ -31,9 +34,9 @@ layout:
 
 Pelagos provides a canonical stream of records, state diffs, attested external events and finality data. This collapses fragmented data and execution stacks into one consistent input/output model, making strategy research, verification, and execution materially simpler.
 
-## Product: user flow and core concepts
+## How it works
 
-### End-to-end user flow
+### Strategy lifecycle
 
 The following steps illustrate the full lifecycle of a strategy on Nabu:
 
@@ -140,7 +143,7 @@ The leaderboard rewards strategies for shipping and real adoption. Status is ear
 
 Nabu’s referral program is designed to scale strategy adoption without turning the product into spam. It rewards users for bringing in people who actually operate strategies, contribute volume, add liquidity, and improve the ecosystem.
 
-### How it works
+### How referrals work
 
 Each user receives a referral link. When a referred user signs up and becomes active, both parties earn rewards. Rewards are tied to measurable usage rather than clicks or signups.
 
