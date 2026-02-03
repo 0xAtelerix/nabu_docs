@@ -1,8 +1,11 @@
 ---
 proofedDate: none
-title: "Vision"
-content: The shift from manual crypto operations to strategy- and agent-driven execution, and why users need a single surface to create, run, and coordinate strategies, with guardrails in place, at scale.
-notes: > 
+title: Vision
+content: >-
+  The shift from manual crypto operations to strategy- and agent-driven
+  execution, and why users need a single surface to create, run, and coordinate
+  strategies, with guardrails in place, at scale.
+notes: |
   todo in place 1 image
 layout:
   width: default
@@ -32,11 +35,11 @@ That is the superapp end state: one surface to create, execute, coordinate, and 
 
 Nabu supports a strategy lifecycle that enables rapid iteration without sacrificing determinism, safety, or execution quality, turning strategy development into an ongoing operating loop:
 
-- **Strategy creation:** rapidly generate dozens to hundreds of strategy variants, verify them deterministically, test them, and select the best-performing version.  
-- **Research-first evaluation:** simulate execution, compute Profit and Loss (PnL) and risk metrics, and rank variants before taking real market risk.  
-- **Execution-grade automation:** execute strategies via event-driven automation with sub-second time-to-first-action. The MVP target is ~250ms p50 from market-relevant event to outbound transaction or order request, with venue-dependent confirmation.  
-- **Intent-based execution and solvers:** strategies specify desired outcomes as intents. Solvers translate those intents into concrete execution, starting with a first-party solver and expanding to verified partners and third-party plugins.  
-- **Agent-driven iteration:** multiple agent-generated variants are evaluated in simulation, promoted or iterated based on objective performance metrics, and retired when they underperform. Natural selection in action.
+* **Strategy creation:** rapidly generate dozens to hundreds of strategy variants, verify them deterministically, test them, and select the best-performing version.
+* **Research-first evaluation:** simulate execution, compute Profit and Loss (PnL) and risk metrics, and rank variants before taking real market risk.
+* **Execution-grade automation:** execute strategies via event-driven automation with sub-second time-to-first-action. The MVP target is \~250ms p50 from market-relevant event to outbound transaction or order request, with venue-dependent confirmation.
+* **Intent-based execution and solvers:** strategies specify desired outcomes as intents. Solvers translate those intents into concrete execution, starting with a first-party solver and expanding to verified partners and third-party plugins.
+* **Agent-driven iteration:** multiple agent-generated variants are evaluated in simulation, promoted or iterated based on objective performance metrics, and retired when they underperform. Natural selection in action.
 
 ## System guarantees
 
@@ -54,15 +57,15 @@ Strategies are embedded directly to social coordination functions and tie direct
 
 A native referral program rewards users and teams when invitations convert into measurable activity, including simulations, deployments, and executed volume.
 
-<!-- todo: The following diagram summarizes these features and flows.  -->
-
 ## Business model
 
 Nabu’s business model is aligned with measurable execution, real usage, and strategy performance, rather than activity or speculation. Revenue is generated at the points where value is created for users, solvers, and strategy builders:
 
-- **Execution and access fees:** Nabu charges execution fees on routed volume (basis points) and/or subscription tiers for power users.  
-- **Solver marketplace economics:** Nabu takes a marketplace fee on solver activity and offers premium execution services, aligning incentives around execution quality, latency, and reliability.  
-- **Strategy monetization:** strategy builders can offer their strategies to users under profit-share terms (and may include management and performance fees); Nabu charges a small take-rate on those earnings.  
-- **Enterprise and private deployments:** Nabu offers enterprise and private deployments with dedicated infrastructure, integrations, and support for institutions and advanced operators.
+* **Execution and access fees:** Nabu charges execution fees on routed volume (basis points) and/or subscription tiers for power users.
+* **Solver marketplace economics:** Nabu takes a marketplace fee on solver activity and offers premium execution services, aligning incentives around execution quality, latency, and reliability.
+* **Strategy monetization:** strategy builders can offer their strategies to users under profit-share terms (and may include management and performance fees); Nabu charges a small take-rate on those earnings.
+* **Enterprise and private deployments:** Nabu offers enterprise and private deployments with dedicated infrastructure, integrations, and support for institutions and advanced operators.
 
 This model ensures that platform revenue scales with execution quality, strategy performance, and real economic activity, reinforcing Nabu’s flywheel rather than extracting value independently of user outcomes.
+
+<figure><img src=".gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>

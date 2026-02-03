@@ -1,8 +1,11 @@
 ---
 proofedDate: none
-title: "Why now?"
-content: Why advances in LLMs shift the bottleneck from strategy expression to verification, safety, and execution, and why execution-grade substrates are now required for AI-driven trading.
-notes: >
+title: Why now?
+content: >-
+  Why advances in LLMs shift the bottleneck from strategy expression to
+  verification, safety, and execution, and why execution-grade substrates are
+  now required for AI-driven trading.
+notes: ''
 layout:
   width: default
   title:
@@ -25,10 +28,10 @@ LLMs drastically reduce the cost of expressing strategy hypotheses. They move th
 
 ## The market shift
 
-Most AI trading products today fall into two buckets: 
+Most AI trading products today fall into two buckets:
 
-- Workflow glue optimized for slow automation, or (
-- Unconstrained code generation that shifts debugging, safety, and operations to the user. 
+* Workflow glue optimized for slow automation, or (
+* Unconstrained code generation that shifts debugging, safety, and operations to the user.
 
 Neither is designed for execution-grade arbitrage and multi-venue trading.
 
@@ -38,8 +41,10 @@ Nabu expands the AI frontier from low-stakes automation to execution-grade tradi
 
 Nabu is a response to the following theses:
 
-- Strategy creation should feel like interacting with a market-literate assistant that produces many candidates, not a single brittle bot.  
-- Every strategy must be deterministic, inspectable, and policy-bound — safe enough to run unattended.  
-- Creators should be able to share performance and terms without revealing proprietary alpha.  
-- Execution should be separated from strategy logic. Agent-to-agent composition allows intent-producing agents to specify outcomes, constraints, and acceptance checks in [PSL](glossary.md#psl); solver agents translate those PSL-bounded intents into executable transactions/orders across venues.  
-- Deployed strategies are living artifacts: monitoring agents observe sealed receipts and realized PnL, detect drift/regime changes, and propose controlled updates (parameter changes, venue routing changes, tighter risk bounds). Updates are versioned and can be gated by simulation/competition-style evaluation before promotion.
+* Strategy creation should feel like interacting with a market-literate assistant that produces many candidates, not a single brittle bot.
+* Every strategy must be deterministic, inspectable, and policy-bound — safe enough to run unattended.
+* Creators should be able to share performance and terms without revealing proprietary alpha.
+* Execution should be separated from strategy logic. Agent-to-agent composition allows intent-producing agents to specify outcomes, constraints, and acceptance checks in [PSL](glossary.md#psl); solver agents translate those PSL-bounded intents into executable transactions/orders across venues.
+* Deployed strategies are living artifacts: monitoring agents observe sealed receipts and realized PnL, detect drift/regime changes, and propose controlled updates (parameter changes, venue routing changes, tighter risk bounds). Updates are versioned and can be gated by simulation/competition-style evaluation before promotion.
+
+<figure><img src=".gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
