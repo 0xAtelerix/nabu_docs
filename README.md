@@ -3,6 +3,8 @@
 This GitBook site syncs with a [GitHub repository](https://github.com/0xAtelerix/nabu_docs.git
 ) and serves the product https://nabu.pro/.
 
+The .gitbook.yaml is overriding the use of the root readme now.
+
 ## Page metadata
 
 GitBook loves its meta:
