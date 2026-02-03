@@ -23,8 +23,7 @@ layout:
 
 # The Solution: Nabu
 
-Nabu is built as an execution‑grade system that turns strategy ideas into verifiable, policy‑bound automation across crypto venues. This section details core components to the solutions such as 
-the strategy design safeguards, the strategy lifecycle.
+Nabu is built as an execution‑grade system that turns strategy ideas into verifiable, policy‑bound automation across crypto venues. This section details core components to the solutions such as the strategy design safeguards and the strategy lifecycle.
 
 ## Why the Pelagos Strategy Language?
 
