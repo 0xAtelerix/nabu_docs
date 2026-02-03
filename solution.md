@@ -1,6 +1,6 @@
 ---
 proofedDate: none
-title: The solution: Nabu
+title: "The solution: Nabu"
 content: How Nabu addresses execution, verification, safety, and distribution as a single integrated system.
 notes: >
 layout:

@@ -1,6 +1,6 @@
 ---
 proofedDate: none
-title: The challenge
+title: "The challenge"
 content: The core execution problems in automated trading today, including latency, reliability, privacy leakage, and limited strategy throughput that prevent safe and scalable automation.
 notes: >
 layout:

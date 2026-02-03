@@ -1,6 +1,6 @@
 ---
 proofedDate: none
-title: Introduction
+title: "Introduction"
 content: What Nabu is and how its execution-grade systems build, evaluate, and run automated, constrained onchain strategies at scale.
 notes: >
 layout:

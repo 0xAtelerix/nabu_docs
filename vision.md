@@ -1,6 +1,6 @@
 ---
 proofedDate: none
-title: Vision
+title: "Vision"
 content: The shift from manual crypto operations to strategy- and agent-driven execution, and why users need a single surface to create, run, and coordinate strategies, with guardrails in place, at scale.
 notes: > 
   todo in place 1 image

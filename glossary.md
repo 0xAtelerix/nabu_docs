@@ -1,6 +1,6 @@
 ---
 proofedDate: none
-title: doesn't get used by GitBook
+title: "Glossary"
 content: A shared set of definitions and acronyms to ensure consistent understanding of technical, cryptographic, and system terms used throughout the documentation.
 notes: >
 layout:

@@ -1,6 +1,6 @@
 ---
 proofedDate: none
-title: Why now?
+title: "Why now?"
 content: Why advances in LLMs shift the bottleneck from strategy expression to verification, safety, and execution, and why execution-grade substrates are now required for AI-driven trading.
 notes: >
 layout:

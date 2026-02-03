@@ -1,6 +1,6 @@
 ---
 proofedDate: none
-title: doesn't get used by GitBook
+title: "Ecosystem & economics"
 content: How an execution-grade ecosystem aligns venues, solvers, wallets, and infrastructure providers around shared interfaces, incentives, and verifiable execution.
 notes: >
 layout:

@@ -1,6 +1,6 @@
 ---
 proofedDate: none
-title: doesn't get used by GitBook
+title: "Strategy flywheel"
 content: How confidential execution, objective performance measurement, and distribution reinforce each other to create a self-improving execution and strategy ecosystem.
 notes: >
 layout:
