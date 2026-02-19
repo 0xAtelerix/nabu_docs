@@ -1,0 +1,42 @@
+site_name: Nabu
+
+theme:
+  name: material
+  logo: assets/images/image.avif
+  #  name: gitbook
+  features:
+#    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - content.code.annotate
+  palette:
+    - scheme: default
+      primary: blue
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+
+nav:
+  - 🧭 Start here:
+    - Introduction: index.md
+    - Vision: vision.md
+    - Why now?: now.md
+  - 🧠 The Challenge:
+    - The challenge: challenge.md
+  - ✅ The Solution:
+    - The Solution: solution.md
+    - Strategy flywheel: flywheel.md
+    - Ecosystem & economics: ecosystems.md
+  - 🛠️ Nabu technology:
+    - Roadmap: roadmap.md
+    - Nabu technology: technology.md
+  - 💡 Knowledge Base:
+    - Glossary: glossary.md
+
+plugins:
+  - search
+#  - section-index
+#  - material-plausible
+#  - git-revision-date-localized
