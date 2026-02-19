@@ -68,4 +68,4 @@ Nabu’s business model is aligned with measurable execution, real usage, and st
 
 This model ensures that platform revenue scales with execution quality, strategy performance, and real economic activity, reinforcing Nabu’s flywheel rather than extracting value independently of user outcomes.
 
-<figure><img src=".gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+![Vision diagram](assets/images/image (3).png)

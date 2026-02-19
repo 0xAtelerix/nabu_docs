@@ -47,4 +47,4 @@ Nabu is a response to the following theses:
 * Execution should be separated from strategy logic. Agent-to-agent composition allows intent-producing agents to specify outcomes, constraints, and acceptance checks in [PSL](glossary.md#psl); solver agents translate those PSL-bounded intents into executable transactions/orders across venues.
 * Deployed strategies are living artifacts: monitoring agents observe sealed receipts and realized PnL, detect drift/regime changes, and propose controlled updates (parameter changes, venue routing changes, tighter risk bounds). Updates are versioned and can be gated by simulation/competition-style evaluation before promotion.
 
-<figure><img src=".gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+![Vision diagram](assets/images/image (8).png)

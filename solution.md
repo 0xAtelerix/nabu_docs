@@ -48,7 +48,7 @@ The following steps illustrate the full lifecycle of a strategy on Nabu:
 * Step 8 — **Iterate:** fork, version, and refine based on observed receipts, metrics, and failure analysis.
 * (Optional) Step 9 — **Share:** publish performance details and terms while keeping proprietary logic private.
 
-<figure><img src=".gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+![Vision diagram](assets/images/image (4).png)
 
 ### Privacy guardrails
 
@@ -56,7 +56,7 @@ Throughout the strategy lifecycle, the user strategy is protected by Nabu’s gu
 
 Execution is driven by canonical state and event data aggregated by Pelagos across public blockchains and centralized exchanges. Resulting outbound actions — onchain transactions, [CEX](glossary.md#cex) orders, or abstract intents — are posted to public venues and logs as usual. After execution, sealed receipts and metrics are produced, enabling verifiable performance reporting with selective disclosure: users can share outcomes, constraints, and performance envelopes without revealing proprietary strategy logic.
 
-<figure><img src=".gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+![Vision diagram](assets/images/image (5).png)
 
 ### Research simulation mode
 
@@ -87,7 +87,7 @@ Nabu is built for strategy classes where timing, data freshness, and operational
 * **Canonical inputs:** Pelagos provides a fresh, consistent stream of market-relevant inputs.
 * **Time-to-first-action:** At launch, Nabu targets \~250ms p50 from relevant event to outbound transaction/order request.
 
-<figure><img src=".gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+![Vision diagram](assets/images/image (6).png)
 
 ### Intents, solvers, and agent-to-agent composition
 
@@ -99,7 +99,7 @@ Solvers are pluggable executors. Given an intent and the latest canonical state,
 
 Agent-to-agent composition uses the same interface. Producer agents (signal, risk, portfolio) express their needs precisely as PSL-bounded intents. Solver-side agents satisfy them by producing concrete execution plans that meet the acceptance checks. Monitoring agents can observe receipts, PnL, and propose controlled updates (e.g., parameter changes, tighter bounds, solver/venue switching), gated by simulation and policy.
 
-<figure><img src=".gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+![Vision diagram](assets/images/image (7).png)
 
 ### Risk controls
 

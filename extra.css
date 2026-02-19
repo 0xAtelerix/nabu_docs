@@ -1,0 +1,25 @@
+
+nav .md-nav__item .md-nav__list {
+    margin-left: 16px !important;
+}
+
+
+
+nav .md-nav__item--section:nth-child(1) > .md-nav__link {
+    font-weight: 700; /* Start here */
+}
+
+nav .md-nav__item--section:nth-child(3) > .md-nav__link {
+    font-weight: 700; /* The Challenge */
+}
+
+nav .md-nav__item--section:nth-child(3) > .md-nav__link {
+    font-weight: 700; /* The Solution */
+}
+
+nav .md-nav__item--section:nth-child(3) > .md-nav__link {
+    font-weight: 700; /* Nabu technology */
+}
+nav .md-nav__item--section:nth-child(3) > .md-nav__link {
+    font-weight: 700; /* Knowledge Base */
+}
