@@ -10,14 +10,29 @@ theme:
     - navigation.top
     - search.suggest
     - content.code.annotate
+# added
+    - search.highlight
+    - content.tabs.link
+    - content.code.copy
   palette:
     - scheme: default
-      primary: blue
+      primary: indigo
       accent: indigo
       toggle:
-        icon: material/weather-sunny
+        icon: material/brightness-7
         name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
 
+extra_css:
+  - stylesheets/extra.css
 nav:
   - 🧭 Start here:
     - Introduction: index.md
