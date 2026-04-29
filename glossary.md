@@ -1,22 +1,10 @@
 ---
 proofedDate: none
-title: "Glossary"
-content: A shared set of definitions and acronyms to ensure consistent understanding of technical, cryptographic, and system terms used throughout the documentation.
-notes: >
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
+title: Glossary
+content: >-
+  A shared set of definitions and acronyms to ensure consistent understanding of
+  technical, cryptographic, and system terms used throughout the documentation.
+notes: ''
 ---
 
 # Glossary
@@ -25,13 +13,9 @@ Providing acronyms and definitions.
 
 ## A
 
-### Appchain
+### Application transaction
 
-Application-specific chain. A dedicated blockchain or DAG chain instance focused on a single application or project. Appchains allow developers to tailor consensus parameters, tokenomics, and execution logic to the specific needs of their application, rather than relying on a general-purpose L1 or L2.
-
-### Appchain transaction
-
-A transaction signed by a user and submitted to a specific Appchain’s RPC endpoint to modify or interact with that Appchain’s state.
+A transaction signed by a user and submitted to a specific application's RPC endpoint to modify or interact with that application's state.
 
 ## C
 
@@ -69,7 +53,7 @@ Any final outcome/transaction produced via TSS is then sent out to external L1/L
 
 ### Epoch
 
-A fixed period of time (or a number of blocks) in which Appchains execute transactions, produce blocks and generate a checkpoint. Once an epoch concludes, validators finalize the resulting checkpoint before moving on to the next epoch.
+A fixed period of time (or a number of blocks) in which applications execute transactions, produce blocks and generate a checkpoint. Once an epoch concludes, validators finalize the resulting checkpoint before moving on to the next epoch.
 
 ### Epoch finalization
 
@@ -137,8 +121,8 @@ Threshold Signature Schemes (TSS). A cryptographic signing process where multipl
 
 ### Validator
 
-A Pelagos open-source node that includes L1/L2 oracles, sequencing consensus, Appchain executions, and TSS signing. A single node consists of a list of L1/L2 clients for DAG events, a DAG node for sequencing, Appchain execution nodes and a TSS signing operator. It can be physically on a single server or distributed as microservices.
+A Pelagos open-source node that includes L1/L2 oracles, sequencing consensus, application executions, and TSS signing. A single node consists of a list of L1/L2 clients for DAG events, a DAG node for sequencing, application execution nodes and a TSS signing operator. It can be physically on a single server or distributed as microservices.
 
 ### Validator set
 
-The pool of validators authorized to participate in Pelagos' DAG consensus and TSS signing.  A majority (⅔+1 by stake) must sign blocks, checkpoints, and external transactions.
+The pool of validators authorized to participate in Pelagos' DAG consensus and TSS signing. A majority (⅔+1 by stake) must sign blocks, checkpoints, and external transactions.
