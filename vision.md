@@ -1,14 +1,3 @@
----
-proofedDate: none
-title: Vision
-content: >-
-  The shift from manual crypto operations to strategy- and agent-driven
-  execution, and why users need a single surface to create, run, and coordinate
-  strategies, with guardrails in place, at scale.
-notes: |
-  todo in place 1 image
----
-
 # Vision
 
 The long-term shift is clear, crypto won’t be operated by humans clicking through ten interfaces. It will be operated by strategies. People will describe outcomes and constraints, and automation will do the repetitive work: monitoring, moving capital, executing actions, handling retries, and stopping safely when conditions break.
@@ -33,7 +22,7 @@ Nabu builds in privacy and control by design allowing strategies to remain priva
 
 ## A verifiable strategy language
 
-Strategies are expressed in the Pelagos Specific Language ([PSL](../glossary.md#psl)), a constrained, deterministic strategy language with structured compiler feedback, enabling safe iteration without sacrificing speed.
+Strategies are expressed in the Pelagos Specific Language ([PSL](glossary.md#psl)), a constrained, deterministic strategy language with structured compiler feedback, enabling safe iteration without sacrificing speed.
 
 ## Connected ecosystems
 
@@ -54,4 +43,4 @@ Nabu’s business model is aligned with measurable execution, real usage, and st
 
 This model ensures that platform revenue scales with execution quality, strategy performance, and real economic activity, reinforcing Nabu’s flywheel rather than extracting value independently of user outcomes.
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
