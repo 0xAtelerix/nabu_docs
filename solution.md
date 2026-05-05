@@ -5,20 +5,6 @@ content: >-
   How Nabu addresses execution, verification, safety, and distribution as a
   single integrated system.
 notes: ''
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
 ---
 
 # The Solution: Nabu

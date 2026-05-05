@@ -7,20 +7,6 @@ content: >-
   strategies, with guardrails in place, at scale.
 notes: |
   todo in place 1 image
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
 ---
 
 # Vision
@@ -47,7 +33,7 @@ Nabu builds in privacy and control by design allowing strategies to remain priva
 
 ## A verifiable strategy language
 
-Strategies are expressed in the Pelagos Specific Language ([PSL](glossary.md#psl)), a constrained, deterministic strategy language with structured compiler feedback, enabling safe iteration without sacrificing speed.
+Strategies are expressed in the Pelagos Specific Language ([PSL](../glossary.md#psl)), a constrained, deterministic strategy language with structured compiler feedback, enabling safe iteration without sacrificing speed.
 
 ## Connected ecosystems
 
@@ -68,4 +54,4 @@ Nabu’s business model is aligned with measurable execution, real usage, and st
 
 This model ensures that platform revenue scales with execution quality, strategy performance, and real economic activity, reinforcing Nabu’s flywheel rather than extracting value independently of user outcomes.
 
-<figure><img src=".gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>

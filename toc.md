@@ -1,10 +1,10 @@
 # Table of contents
 
-## 🧭 Start here
+## 🧭 WELCOME
 
 * [Introduction](index.md)
-* [Vision](vision.md)
-* [Why now?](now.md)
+* [Vision](welcome/vision.md)
+* [Why now?](welcome/now.md)
 
 ## 🧠 The Challenge
 
