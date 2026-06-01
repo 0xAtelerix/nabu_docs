@@ -4,20 +4,20 @@
 
 1. Go to [app.nabu.pro](https://app.nabu.pro) and click \[Log In] in the top-right corner.
 
-<figure><img src="../assets/images/unknown.png" alt="" width="563"><figcaption></figcaption></figure>
+![](../assets/images/unknown.png)
 
 2. After logging in, the You're on the waitlist screen appears. Enter your 8-character invite code in the format XXXX-XXXX and click \[Enter Nabu].
 
-<figure><img src="../assets/images/full-size-preview.png" alt="" width="500"><figcaption></figcaption></figure>
+<div align="center"><img src="/assets/images/full-size-preview.png" alt="" width="500"><figcaption></figcaption></div>
 
-\
+
 Settings MEXC
 -------------
 
 3. Connect your exchange. To run any strategy that uses a centralized exchange, you need to link a CEX account to Nabu.&#x20;
 4. Log in to your [MEXC account](https://www.mexc.com/user) and go to mexc.com/user. From the left sidebar, click API Management.
 
-<figure><img src="../assets/images/unknown (1).png" alt=""><figcaption></figcaption></figure>
+<div align="center"><img src="../assets/images/unknown (1).png" alt=""><figcaption></figcaption></div>
 
 5. On the Manage API / Create New API Key page, set permissions exactly as follows:
 
