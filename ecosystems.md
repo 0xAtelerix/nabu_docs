@@ -1,25 +1,14 @@
 ---
 proofedDate: none
-title: "Ecosystem & economics"
-content: How an execution-grade ecosystem aligns venues, solvers, wallets, and infrastructure providers around shared interfaces, incentives, and verifiable execution.
-notes: >
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
+title: Ecosystem & economics
+content: >-
+  How an execution-grade ecosystem aligns venues, solvers, wallets, and
+  infrastructure providers around shared interfaces, incentives, and verifiable
+  execution.
+notes: ''
 ---
 
-# Ecosystem and economics
+# Ecosystem & economics
 
 ## Partners
 
@@ -29,9 +18,9 @@ Nabu is designed as an open, execution-grade system that benefits from deep part
 
 Value proposition: integrate once, receive distributed orderflow from strategies. Nabu provides:
 
-- Standardized intents and solver interface.  
-- Measurable execution objectives (price, latency, success rate).  
-- Reputation and quality ranking for solvers.
+* Standardized intents and solver interface.
+* Measurable execution objectives (price, latency, success rate).
+* Reputation and quality ranking for solvers.
 
 This model allows venues and solvers to compete on execution quality rather than proprietary integrations.
 
@@ -39,16 +28,16 @@ This model allows venues and solvers to compete on execution quality rather than
 
 Value proposition: offer users safe automation without taking custody.
 
-- Policy-bound execution and explicit permissions.  
-- Selective disclosure and receipts for auditability.  
-- Configuration profiles for retail, power users, and institutions.
+* Policy-bound execution and explicit permissions.
+* Selective disclosure and receipts for auditability.
+* Configuration profiles for retail, power users, and institutions.
 
 Wallets and custodians can support automation while preserving user control and compliance boundaries.
 
 ### Data and infrastructure partners
 
-- Publish attested feeds into Pelagos as canonical inputs for strategies.  
-- Provide venue connectivity, liquidity, and execution services to solvers.
+* Publish attested feeds into Pelagos as canonical inputs for strategies.
+* Provide venue connectivity, liquidity, and execution services to solvers.
 
 This creates a common data and execution substrate that reduces fragmentation across venues and infrastructure providers.
 

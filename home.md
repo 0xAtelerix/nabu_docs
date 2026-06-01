@@ -1,27 +1,3 @@
----
-proofedDate: none
-title: Why now?
-content: >-
-  Why advances in LLMs shift the bottleneck from strategy expression to
-  verification, safety, and execution, and why execution-grade substrates are
-  now required for AI-driven trading.
-notes: ''
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
----
-
 # Why now?
 
 LLMs drastically reduce the cost of expressing strategy hypotheses. They move the bottleneck to verification, safety, and execution. The challenge now is how to turn many hypotheses into deterministic, low-latency automation that can run unattended.
