@@ -50,7 +50,7 @@ nav:
     - Roadmap: roadmap.md
     - Nabu technology: technology.md
   - 🏃‍♂️ GETTING STARTED:
-    - getting-started: getting-started/how-to-use-nabu-a-step-by-step-guide.md
+    - "how to use nabu: a step by step guide": getting-started/how-to-use-nabu-a-step-by-step-guide.md
   - 💡 Knowledge Base:
     - Glossary: glossary.md
 
