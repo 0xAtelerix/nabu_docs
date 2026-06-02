@@ -46,3 +46,42 @@ h1, h2, h3, h4, h5, h6 {
 .md-nav__item .md-nav__list {
     margin-left: 16px !important;
 }
+
+/*
+ * Mobile: navigation.expand only affects desktop sidebar.
+ * Material uses collapsed sections + slide panels on small screens;
+ * force a flat list with all pages visible (no extra JS).
+ */
+@media screen and (max-width: 76.234375em) {
+
+  .md-nav--primary,
+  .md-nav--primary .md-nav {
+    position: static !important;
+    display: block !important;
+    height: auto !important;
+    inset: auto !important;
+    z-index: auto !important;
+    flex: none !important;
+    overflow: visible !important;
+    background-color: transparent !important;
+  }
+
+  .md-nav--primary .md-nav__list {
+    transform: none !important;
+  }
+
+  .md-nav--primary .md-nav .md-nav__title {
+    display: none !important;
+  }
+
+  .md-nav--primary .md-nav__item--section.md-nav__item--nested > .md-nav {
+    display: block !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  .md-nav--primary .md-nav__item--section > .md-nav .md-nav__list {
+    margin-left: 0.75rem !important;
+    padding-bottom: 0.35rem;
+  }
+}
