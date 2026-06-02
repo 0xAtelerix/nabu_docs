@@ -23,3 +23,29 @@ nav .md-nav__item--section:nth-child(3) > .md-nav__link {
 nav .md-nav__item--section:nth-child(3) > .md-nav__link {
     font-weight: 700; /* Knowledge Base */
 }
+
+/* Показывать полный список разделов в мобильном меню */
+@media screen and (max-width: 76.1875em) {
+  /* Открываем боковую панель с полным списком */
+  .md-nav--primary .md-nav__item--active > .md-nav__link {
+    pointer-events: none;
+  }
+  
+  /* Скрываем вложенный активный раздел, показываем корневое меню */
+  .md-nav--primary .md-nav__item--active > .md-nav {
+    display: none;
+  }
+  
+  /* Принудительно показываем корневую навигацию */
+  .md-nav--primary > .md-nav__list > .md-nav__item > .md-nav {
+    display: block !important;
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+  }
+  
+  /* Сбрасываем позицию меню */
+  .md-nav--primary .md-nav {
+    position: static;
+    background: transparent;
+  }
+}
