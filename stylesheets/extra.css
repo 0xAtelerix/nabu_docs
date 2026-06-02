@@ -36,8 +36,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*
- * Mobile drawer: flat nav, all sections open, vertical scroll only.
- * Hides page TOC (TL;DR, Overview, …) — only pages from mkdocs nav.
+ * Mobile drawer: one vertical list, all sections expanded.
+ * Material stacks nested .md-nav as position:absolute;height:100% —
+ * that leaves a huge empty gap and hides other sections.
  */
 @media screen and (max-width: 76.234375em) {
 
@@ -51,65 +52,80 @@ h1, h2, h3, h4, h5, h6 {
     overflow-x: hidden !important;
   }
 
-  .md-nav--primary {
-    overflow-x: hidden !important;
-    width: 100% !important;
-  }
-
-  .md-nav--primary,
-  .md-nav--primary .md-nav {
-    position: static !important;
+  .md-sidebar--primary .md-nav--primary {
+    position: relative !important;
     display: block !important;
     height: auto !important;
-    inset: auto !important;
-    z-index: auto !important;
-    flex: none !important;
-    overflow-x: hidden !important;
-    overflow-y: visible !important;
-    background-color: transparent !important;
-  }
-
-  .md-nav--primary .md-nav__list {
-    transform: none !important;
-    overflow-x: hidden !important;
-    max-width: 100% !important;
-  }
-
-  .md-nav--primary .md-nav .md-nav__title {
-    display: none !important;
-  }
-
-  /* All section sub-pages visible without tapping the header */
-  .md-nav--primary .md-nav__item--section.md-nav__item--nested > .md-nav,
-  .md-nav--primary .md-nav__item--section.md-nav__item--nested > .md-nav__toggle:not(:checked) ~ .md-nav {
-    display: block !important;
-    max-height: none !important;
+    min-height: 0 !important;
     overflow: visible !important;
   }
 
-  /* Section headers are labels only — do not collapse / drill down */
-  .md-nav--primary .md-nav__item--section > label.md-nav__link {
-    pointer-events: none;
-    cursor: default;
+  .md-sidebar--primary .md-nav--primary > .md-nav__list {
+    position: relative !important;
+    transform: none !important;
+    flex: none !important;
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
   }
 
-  .md-nav--primary .md-nav__item--section > .md-nav .md-nav__list {
+  .md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item {
+    position: relative !important;
+    display: block !important;
+  }
+
+  /* Every nested panel: normal flow, not full-screen overlay */
+  .md-sidebar--primary .md-nav--primary .md-nav {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    display: block !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    inset: auto !important;
+    z-index: auto !important;
+    flex: none !important;
+    overflow: visible !important;
+    background: transparent !important;
+  }
+
+  .md-sidebar--primary .md-nav--primary .md-nav__list {
+    transform: none !important;
+    flex: none !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  .md-sidebar--primary .md-nav--primary .md-nav .md-nav__title {
+    display: none !important;
+  }
+
+  .md-sidebar--primary .md-nav--primary .md-nav__item--section > .md-nav,
+  .md-sidebar--primary .md-nav--primary .md-nav__item--section > .md-nav__toggle:not(:checked) ~ .md-nav {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  .md-sidebar--primary .md-nav--primary .md-nav__item--section > .md-nav .md-nav__list {
     margin-left: 0.75rem !important;
     padding-bottom: 0.35rem;
   }
 
-  /* Hide table-of-contents inside nav (TL;DR, Overview, …) */
-  .md-nav--primary .md-nav--secondary {
-    display: none !important;
-  }
-
-  .md-nav--primary .md-nav__item:has(> .md-nav__link[href*="#"]) {
-    display: none !important;
-  }
-
-  .md-nav--primary > .md-nav__list > .md-nav__item--section {
+  .md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item--section {
     border-bottom: 1px solid var(--md-default-fg-color--lightest);
+    margin-bottom: 0.35rem;
     padding-bottom: 0.25rem;
-    margin-bottom: 0.25rem;
+  }
+
+  /* Page TOC only (TL;DR, Overview) — not main nav pages */
+  .md-sidebar--primary .md-nav--primary .md-nav--secondary {
+    display: none !important;
+  }
+
+  .md-sidebar--primary .md-nav--primary .md-nav__item:has(> .md-nav__link[href^="#"]) {
+    display: none !important;
   }
 }
