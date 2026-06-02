@@ -4,35 +4,24 @@
  * ===========================================
  */
 
-/* ------------------------------------------
-   1. GLOBAL HEADING STYLES
-   ------------------------------------------ */
-
 h1, h2, h3, h4, h5, h6 {
     font-weight: 900 !important;
 }
 
-/* ------------------------------------------
-   2. NAVIGATION SIDEBAR (desktop)
-   ------------------------------------------ */
-
-/* Section titles */
+/* Desktop sidebar */
 .md-nav__title {
     font-weight: 200;
     font-size: 1.1rem;
 }
 
-/* Active links */
 .md-nav__link--active {
     font-weight: 600;
 }
 
-/* Spacing between sidebar sections */
 .md-nav__item--section {
     margin-top: 1.0em;
 }
 
-/* Section headings in sidebar */
 .md-nav__item--section > .md-nav__link {
     font-weight: 700;
     font-size: 0.75rem;
@@ -42,15 +31,15 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0.5rem;
 }
 
-/* Nested list indentation */
 .md-nav__item .md-nav__list {
     margin-left: 16px !important;
 }
 
-/* ------------------------------------------
-   3. MOBILE NAV — flat list (no drill-down panels)
-   ------------------------------------------ */
-
+/*
+ * Mobile: one scrollable menu with all pages visible.
+ * navigation.expand opens sections in HTML; these rules disable
+ * Material's slide-in sub-panels so nothing gets trapped without "back".
+ */
 @media screen and (max-width: 76.234375em) {
 
   .md-nav--primary,
@@ -69,43 +58,15 @@ h1, h2, h3, h4, h5, h6 {
     transform: none !important;
   }
 
-  /* No separate "back" screen inside a section */
   .md-nav--primary .md-nav .md-nav__title {
     display: none !important;
   }
 
-  .md-nav--primary .md-nav__item--section.md-nav__item--nested > .md-nav__toggle:not(:checked) ~ .md-nav {
-    display: none !important;
-  }
-
-  .md-nav--primary .md-nav__item--section.md-nav__item--nested > .md-nav__toggle:checked ~ .md-nav {
+  .md-nav--primary .md-nav__item--section.md-nav__item--nested > .md-nav {
     display: block !important;
-  }
-
-  .md-nav--primary .md-nav__item--section > .md-nav__link {
-    cursor: pointer;
-  }
-
-  .md-nav--primary .md-nav__item--section > .md-nav__link .md-nav__icon {
-    transition: transform 0.2s ease;
-  }
-
-  .md-nav--primary .md-nav__item--section > .md-nav__toggle:checked + .md-nav__link .md-nav__icon {
-    transform: rotate(-180deg);
   }
 
   .md-nav--primary .md-nav__item--section > .md-nav .md-nav__list {
     margin-left: 0.75rem !important;
-    padding-bottom: 0.35rem;
-  }
-
-  .md-nav--primary .md-nav__link {
-    padding-left: 0.6rem;
-  }
-
-  .md-nav--primary > .md-nav__list > .md-nav__item--section {
-    border-bottom: 1px solid var(--md-default-fg-color--lightest);
-    padding-bottom: 0.25rem;
-    margin-bottom: 0.25rem;
   }
 }
