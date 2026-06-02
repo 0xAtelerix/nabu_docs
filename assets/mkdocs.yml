@@ -1,25 +1,25 @@
 site_name: Nabu Documentation
-
 theme:
   name: material
   logo: assets/images/image.avif
   #  name: gitbook
   features:
+    - navigation.sections
     - navigation.expand
     # - navigation.tabs
     # - navigation.sections
     - navigation.top
     - search.suggest
-    - content.code.annotate
-# added
     - search.highlight
     - content.tabs.link
+    - content.code.annotation
     - content.code.copy
+    - content.code.annotate
   palette:
     - scheme: default
       # primary: teal
-      # primary: deep orange
-      primary: indigo
+      primary: deep orange
+      # primary: indigo
       accent: indigo
       toggle:
         icon: material/brightness-7
@@ -57,6 +57,7 @@ nav:
 
 plugins:
   - search
+  - tags
 #  - section-index
 #  - material-plausible
 #  - git-revision-date-localized
