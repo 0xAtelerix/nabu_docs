@@ -38,22 +38,22 @@ extra_css:
   - stylesheets/extra.css
 nav:
   - 🧭 Start here:
-    - Introduction: index.md
-    - Vision: vision.md
-    - Why now?: now.md
+      - Introduction: index.md
+      - Vision: vision.md
+      - Why now?: now.md
   - 🧠 The Challenge:
-    - The challenge: challenge.md
+      - The challenge: challenge.md
   - ✅ The Solution:
-    - The Solution: solution.md
-    - Strategy flywheel: flywheel.md
-    - Ecosystem & economics: ecosystems.md
+      - The Solution: solution.md
+      - Strategy flywheel: flywheel.md
+      - Ecosystem & economics: ecosystems.md
   - 🛠️ Nabu technology:
-    - Roadmap: roadmap.md
-    - Nabu technology: technology.md
+      - Roadmap: roadmap.md
+      - Nabu technology: technology.md
   - 🏃‍♂️ GETTING STARTED:
-    - "how to use nabu: a step by step guide": getting-started/how-to-use-nabu-a-step-by-step-guide.md
+      - "how to use nabu: a step by step guide": getting-started/how-to-use-nabu-a-step-by-step-guide.md
   - 💡 Knowledge Base:
-    - Glossary: glossary.md
+      - Glossary: glossary.md
 
 plugins:
   - search
