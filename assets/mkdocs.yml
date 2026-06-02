@@ -11,8 +11,6 @@ theme:
   #  name: gitbook
   features:
     - navigation.sections
-    # navigation.expand auto-opens the active section; on mobile the drawer
-    # then opens already drilled into that subsection (back arrow required).
     # - navigation.tabs
     # - navigation.sections
     - navigation.top

@@ -48,15 +48,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ------------------------------------------
-   3. MOBILE NAV — accordion (no drill-down panels)
-   Material defaults to full-screen slide panels;
-   we keep every section in one scrollable list and
-   expand children below the section header.
+   3. MOBILE NAV — flat list (no drill-down panels)
    ------------------------------------------ */
 
 @media screen and (max-width: 76.234375em) {
 
-  /* Sidebar nav is a normal document flow column */
   .md-nav--primary,
   .md-nav--primary .md-nav {
     position: static !important;
@@ -73,12 +69,11 @@ h1, h2, h3, h4, h5, h6 {
     transform: none !important;
   }
 
-  /* Hide only the in-section "back" row, keep drawer logo/title */
+  /* No separate "back" screen inside a section */
   .md-nav--primary .md-nav .md-nav__title {
     display: none !important;
   }
 
-  /* Accordion: show subsection links only when section is open */
   .md-nav--primary .md-nav__item--section.md-nav__item--nested > .md-nav__toggle:not(:checked) ~ .md-nav {
     display: none !important;
   }
@@ -87,7 +82,6 @@ h1, h2, h3, h4, h5, h6 {
     display: block !important;
   }
 
-  /* Section header looks clickable */
   .md-nav--primary .md-nav__item--section > .md-nav__link {
     cursor: pointer;
   }
@@ -100,13 +94,18 @@ h1, h2, h3, h4, h5, h6 {
     transform: rotate(-180deg);
   }
 
-  /* Child page links */
   .md-nav--primary .md-nav__item--section > .md-nav .md-nav__list {
     margin-left: 0.75rem !important;
-    padding-bottom: 0.25rem;
+    padding-bottom: 0.35rem;
   }
 
   .md-nav--primary .md-nav__link {
     padding-left: 0.6rem;
+  }
+
+  .md-nav--primary > .md-nav__list > .md-nav__item--section {
+    border-bottom: 1px solid var(--md-default-fg-color--lightest);
+    padding-bottom: 0.25rem;
+    margin-bottom: 0.25rem;
   }
 }
