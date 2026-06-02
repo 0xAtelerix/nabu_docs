@@ -1,11 +1,12 @@
 (function () {
-  var MOBILE_QUERY = '(max-width: 76.1875em)';
+  var MOBILE_QUERY = '(max-width: 76.234375em)';
 
   function isMobile() {
     return window.matchMedia(MOBILE_QUERY).matches;
   }
 
-  function resetPrimaryNav() {
+  /** Stop Material from sliding the nav stack on small screens. */
+  function flattenMobileNav() {
     if (!isMobile()) return;
 
     var primary = document.querySelector('.md-nav--primary');
@@ -14,31 +15,33 @@
     primary.querySelectorAll('.md-nav__list').forEach(function (list) {
       list.style.setProperty('transform', 'none', 'important');
     });
-
-    primary.querySelectorAll('.md-nav__title').forEach(function (title) {
-      title.style.setProperty('display', 'none', 'important');
-    });
   }
 
   function onDrawerOpen() {
-    // Material applies the drill-down state after the drawer opens.
     requestAnimationFrame(function () {
-      requestAnimationFrame(resetPrimaryNav);
-    });
-  }
-
-  function bindDrawer() {
-    var drawer = document.getElementById('__drawer');
-    if (!drawer) return;
-
-    drawer.addEventListener('change', function () {
-      if (drawer.checked) onDrawerOpen();
+      requestAnimationFrame(flattenMobileNav);
     });
   }
 
   document.addEventListener('DOMContentLoaded', function () {
-    resetPrimaryNav();
-    bindDrawer();
-    window.addEventListener('resize', resetPrimaryNav);
+    flattenMobileNav();
+
+    var drawer = document.getElementById('__drawer');
+    if (drawer) {
+      drawer.addEventListener('change', function () {
+        if (drawer.checked) onDrawerOpen();
+      });
+    }
+
+    var primary = document.querySelector('.md-nav--primary');
+    if (primary) {
+      primary.addEventListener('change', function (event) {
+        if (event.target.classList.contains('md-nav__toggle')) {
+          flattenMobileNav();
+        }
+      });
+    }
+
+    window.addEventListener('resize', flattenMobileNav);
   });
 })();
