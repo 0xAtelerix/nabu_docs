@@ -4,35 +4,24 @@
  * ===========================================
  */
 
-/* ------------------------------------------
-   1. GLOBAL HEADING STYLES
-   ------------------------------------------ */
-
 h1, h2, h3, h4, h5, h6 {
     font-weight: 900 !important;
 }
 
-/* ------------------------------------------
-   2. NAVIGATION SIDEBAR
-   ------------------------------------------ */
-
-/* Section titles */
+/* Desktop sidebar */
 .md-nav__title {
     font-weight: 200;
     font-size: 1.1rem;
 }
 
-/* Active links */
 .md-nav__link--active {
     font-weight: 600;
 }
 
-/* Spacing between sidebar sections */
 .md-nav__item--section {
     margin-top: 1.0em;
 }
 
-/* Section headings in sidebar */
 .md-nav__item--section > .md-nav__link {
     font-weight: 700;
     font-size: 0.75rem;
@@ -42,17 +31,30 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0.5rem;
 }
 
-/* Nested list indentation */
 .md-nav__item .md-nav__list {
     margin-left: 16px !important;
 }
 
 /*
- * Mobile: navigation.expand only affects desktop sidebar.
- * Material uses collapsed sections + slide panels on small screens;
- * force a flat list with all pages visible (no extra JS).
+ * Mobile drawer: flat nav, all sections open, vertical scroll only.
+ * Hides page TOC (TL;DR, Overview, …) — only pages from mkdocs nav.
  */
 @media screen and (max-width: 76.234375em) {
+
+  .md-sidebar--primary .md-sidebar__scrollwrap {
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .md-sidebar--primary .md-sidebar__inner {
+    overflow-x: hidden !important;
+  }
+
+  .md-nav--primary {
+    overflow-x: hidden !important;
+    width: 100% !important;
+  }
 
   .md-nav--primary,
   .md-nav--primary .md-nav {
@@ -62,26 +64,52 @@ h1, h2, h3, h4, h5, h6 {
     inset: auto !important;
     z-index: auto !important;
     flex: none !important;
-    overflow: visible !important;
+    overflow-x: hidden !important;
+    overflow-y: visible !important;
     background-color: transparent !important;
   }
 
   .md-nav--primary .md-nav__list {
     transform: none !important;
+    overflow-x: hidden !important;
+    max-width: 100% !important;
   }
 
   .md-nav--primary .md-nav .md-nav__title {
     display: none !important;
   }
 
-  .md-nav--primary .md-nav__item--section.md-nav__item--nested > .md-nav {
+  /* All section sub-pages visible without tapping the header */
+  .md-nav--primary .md-nav__item--section.md-nav__item--nested > .md-nav,
+  .md-nav--primary .md-nav__item--section.md-nav__item--nested > .md-nav__toggle:not(:checked) ~ .md-nav {
     display: block !important;
     max-height: none !important;
     overflow: visible !important;
   }
 
+  /* Section headers are labels only — do not collapse / drill down */
+  .md-nav--primary .md-nav__item--section > label.md-nav__link {
+    pointer-events: none;
+    cursor: default;
+  }
+
   .md-nav--primary .md-nav__item--section > .md-nav .md-nav__list {
     margin-left: 0.75rem !important;
     padding-bottom: 0.35rem;
+  }
+
+  /* Hide table-of-contents inside nav (TL;DR, Overview, …) */
+  .md-nav--primary .md-nav--secondary {
+    display: none !important;
+  }
+
+  .md-nav--primary .md-nav__item:has(> .md-nav__link[href*="#"]) {
+    display: none !important;
+  }
+
+  .md-nav--primary > .md-nav__list > .md-nav__item--section {
+    border-bottom: 1px solid var(--md-default-fg-color--lightest);
+    padding-bottom: 0.25rem;
+    margin-bottom: 0.25rem;
   }
 }
