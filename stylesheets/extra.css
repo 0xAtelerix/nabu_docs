@@ -4,24 +4,35 @@
  * ===========================================
  */
 
+/* ------------------------------------------
+   1. GLOBAL HEADING STYLES
+   ------------------------------------------ */
+
 h1, h2, h3, h4, h5, h6 {
     font-weight: 900 !important;
 }
 
-/* Desktop sidebar */
+/* ------------------------------------------
+   2. NAVIGATION SIDEBAR
+   ------------------------------------------ */
+
+/* Section titles */
 .md-nav__title {
     font-weight: 200;
     font-size: 1.1rem;
 }
 
+/* Active links */
 .md-nav__link--active {
     font-weight: 600;
 }
 
+/* Spacing between sidebar sections */
 .md-nav__item--section {
     margin-top: 1.0em;
 }
 
+/* Section headings in sidebar */
 .md-nav__item--section > .md-nav__link {
     font-weight: 700;
     font-size: 0.75rem;
@@ -31,42 +42,45 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0.5rem;
 }
 
+/* Nested list indentation */
 .md-nav__item .md-nav__list {
     margin-left: 16px !important;
 }
 
-/*
- * Mobile: one scrollable menu with all pages visible.
- * navigation.expand opens sections in HTML; these rules disable
- * Material's slide-in sub-panels so nothing gets trapped without "back".
- */
-@media screen and (max-width: 76.234375em) {
+/* ------------------------------------------
+   3. MOBILE MENU FIX
+   ------------------------------------------ */
 
-  .md-nav--primary,
-  .md-nav--primary .md-nav {
-    position: static !important;
-    display: block !important;
-    height: auto !important;
-    inset: auto !important;
-    z-index: auto !important;
-    flex: none !important;
-    overflow: visible !important;
-    background-color: transparent !important;
+@media screen and (max-width: 76.1875em) {
+  
+  /* Hide the active section title bar ("Start here") */
+  .md-nav--primary .md-nav__title {
+    display: none;
   }
-
+  
+  /* Reset list transform */
   .md-nav--primary .md-nav__list {
     transform: none !important;
   }
-
-  .md-nav--primary .md-nav .md-nav__title {
-    display: none !important;
+  
+  /* Hide expanded active section, show root menu */
+  .md-nav--primary .md-nav__item--active > .md-nav {
+    display: none;
   }
-
-  .md-nav--primary .md-nav__item--section.md-nav__item--nested > .md-nav {
-    display: block !important;
+  
+  /* Show all root sections */
+  .md-nav--primary > .md-nav__list > .md-nav__item {
+    display: block;
   }
-
-  .md-nav--primary .md-nav__item--section > .md-nav .md-nav__list {
-    margin-left: 0.75rem !important;
+  
+  /* Reset active link styling */
+  .md-nav--primary .md-nav__item--active > .md-nav__link--active {
+    background: transparent;
+    box-shadow: none;
+  }
+  
+  /* Uniform padding for all links */
+  .md-nav--primary .md-nav__link {
+    padding-left: 0.6rem;
   }
 }

@@ -1,16 +1,13 @@
 site_name: Nabu Documentation
-# Markdown is in repo root; config lives in assets/
-docs_dir: ..
-# CI expects the built site at /site (see deploy script: test -d /site)
-site_dir: /site
-exclude_docs: |
-  README.md
 theme:
   name: material
   logo: assets/images/image.avif
+  #  name: gitbook
   features:
     - navigation.sections
     - navigation.expand
+    # - navigation.tabs
+    # - navigation.sections
     - navigation.top
     - search.suggest
     - search.highlight
@@ -20,6 +17,8 @@ theme:
     - content.code.annotate
   palette:
     - scheme: default
+      # primary: teal
+      # primary: deep orange
       primary: indigo
       accent: indigo
       toggle:
@@ -41,7 +40,7 @@ nav:
   - 🧭 Start here:
       - Introduction: index.md
       - Vision: vision.md
-      - Why now?: why-now.md
+      - Why now?: now.md
   - 🧠 The Challenge:
       - The challenge: challenge.md
   - ✅ The Solution:
@@ -59,5 +58,8 @@ nav:
 plugins:
   - search
   - tags
+#  - section-index
+#  - material-plausible
+#  - git-revision-date-localized
 extra_javascript:
   - assets/javascripts/extra.js
