@@ -5,8 +5,9 @@ theme:
   logo: assets/images/image.avif
   #  name: gitbook
   features:
+    - navigation.expand
     # - navigation.tabs
-    - navigation.sections
+    # - navigation.sections
     - navigation.top
     - search.suggest
     - content.code.annotate
@@ -14,12 +15,11 @@ theme:
     - search.highlight
     - content.tabs.link
     - content.code.copy
-    - navigation.expand
   palette:
     - scheme: default
       # primary: teal
-      primary: deep orange
-      #primary: indigo
+      # primary: deep orange
+      primary: indigo
       accent: indigo
       toggle:
         icon: material/brightness-7
