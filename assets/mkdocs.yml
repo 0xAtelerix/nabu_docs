@@ -1,11 +1,18 @@
 site_name: Nabu Documentation
+# Markdown lives in repo root; config file is under assets/
+docs_dir: ..
+exclude_docs: |
+  README.md
+# Build output must sit outside docs_dir (cannot use default assets/site)
+site_dir: ../../.mkdocs-site
 theme:
   name: material
   logo: assets/images/image.avif
   #  name: gitbook
   features:
     - navigation.sections
-    - navigation.expand
+    # navigation.expand auto-opens the active section; on mobile the drawer
+    # then opens already drilled into that subsection (back arrow required).
     # - navigation.tabs
     # - navigation.sections
     - navigation.top
@@ -40,7 +47,7 @@ nav:
   - 🧭 Start here:
       - Introduction: index.md
       - Vision: vision.md
-      - Why now?: now.md
+      - Why now?: why-now.md
   - 🧠 The Challenge:
       - The challenge: challenge.md
   - ✅ The Solution:

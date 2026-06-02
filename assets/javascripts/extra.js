@@ -1,46 +1,44 @@
-document.addEventListener('DOMContentLoaded', function() {
-  
-  function fixMobileNav() {
-    if (window.innerWidth >= 1220) return;
-    
-    var primaryNav = document.querySelector('.md-nav--primary');
-    if (!primaryNav) return;
-    
-    // Hide the expanded active section
-    var activeNav = primaryNav.querySelector('.md-nav__item--active > .md-nav');
-    if (activeNav) {
-      activeNav.style.display = 'none';
-    }
-    
-    // Reset list transform to show root menu
-    var list = primaryNav.querySelector('.md-nav__list');
-    if (list) {
-      list.style.transform = 'none';
-    }
-    
-    // Remove active class from first item to prevent auto-expand
-    var firstSection = primaryNav.querySelector('.md-nav__item--active');
-    if (firstSection) {
-      firstSection.classList.remove('md-nav__item--active');
-    }
+(function () {
+  var MOBILE_QUERY = '(max-width: 76.1875em)';
+
+  function isMobile() {
+    return window.matchMedia(MOBILE_QUERY).matches;
   }
-  
-  // Run on load
-  fixMobileNav();
-  
-  // Also run when drawer opens (for hamburger menu)
-  var drawer = document.querySelector('.md-drawer');
-  if (drawer) {
-    var observer = new MutationObserver(function(mutations) {
-      mutations.forEach(function(mutation) {
-        if (mutation.attributeName === 'class') {
-          if (drawer.classList.contains('md-drawer--active')) {
-            setTimeout(fixMobileNav, 10);
-          }
-        }
-      });
+
+  function resetPrimaryNav() {
+    if (!isMobile()) return;
+
+    var primary = document.querySelector('.md-nav--primary');
+    if (!primary) return;
+
+    primary.querySelectorAll('.md-nav__list').forEach(function (list) {
+      list.style.setProperty('transform', 'none', 'important');
     });
-    observer.observe(drawer, { attributes: true });
+
+    primary.querySelectorAll('.md-nav__title').forEach(function (title) {
+      title.style.setProperty('display', 'none', 'important');
+    });
   }
-  
-});
+
+  function onDrawerOpen() {
+    // Material applies the drill-down state after the drawer opens.
+    requestAnimationFrame(function () {
+      requestAnimationFrame(resetPrimaryNav);
+    });
+  }
+
+  function bindDrawer() {
+    var drawer = document.getElementById('__drawer');
+    if (!drawer) return;
+
+    drawer.addEventListener('change', function () {
+      if (drawer.checked) onDrawerOpen();
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    resetPrimaryNav();
+    bindDrawer();
+    window.addEventListener('resize', resetPrimaryNav);
+  });
+})();

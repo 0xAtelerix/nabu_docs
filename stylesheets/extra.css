@@ -49,36 +49,21 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ------------------------------------------
    3. MOBILE MENU FIX
+   Keep the drawer on the top-level section list instead of
+   auto-drilling into the current page's subsection.
    ------------------------------------------ */
 
 @media screen and (max-width: 76.1875em) {
-  
-  /* Hide the active section title bar ("Start here") */
+  /* Hide the "back" row (e.g. "Start here" with arrow) */
   .md-nav--primary .md-nav__title {
-    display: none;
+    display: none !important;
   }
-  
-  /* Reset list transform */
+
+  /* Disable Material's sliding submenu panels */
   .md-nav--primary .md-nav__list {
     transform: none !important;
   }
-  
-  /* Hide expanded active section, show root menu */
-  .md-nav--primary .md-nav__item--active > .md-nav {
-    display: none;
-  }
-  
-  /* Show all root sections */
-  .md-nav--primary > .md-nav__list > .md-nav__item {
-    display: block;
-  }
-  
-  /* Reset active link styling */
-  .md-nav--primary .md-nav__item--active > .md-nav__link--active {
-    background: transparent;
-    box-shadow: none;
-  }
-  
+
   /* Uniform padding for all links */
   .md-nav--primary .md-nav__link {
     padding-left: 0.6rem;
