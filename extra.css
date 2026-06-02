@@ -1,51 +1,66 @@
+/* === ОБЩИЕ СТИЛИ === */
 
 nav .md-nav__item .md-nav__list {
     margin-left: 16px !important;
 }
 
-
-
+/* Жирный шрифт для заголовков разделов (исправленные селекторы) */
 nav .md-nav__item--section:nth-child(1) > .md-nav__link {
-    font-weight: 700; /* Start here */
+    font-weight: 700; /* 🧭 Start here */
+}
+
+nav .md-nav__item--section:nth-child(2) > .md-nav__link {
+    font-weight: 700; /* 🧠 The Challenge */
 }
 
 nav .md-nav__item--section:nth-child(3) > .md-nav__link {
-    font-weight: 700; /* The Challenge */
+    font-weight: 700; /* ✅ The Solution */
 }
 
-nav .md-nav__item--section:nth-child(3) > .md-nav__link {
-    font-weight: 700; /* The Solution */
+nav .md-nav__item--section:nth-child(4) > .md-nav__link {
+    font-weight: 700; /* 🛠️ Nabu technology */
 }
 
-nav .md-nav__item--section:nth-child(3) > .md-nav__link {
-    font-weight: 700; /* Nabu technology */
-}
-nav .md-nav__item--section:nth-child(3) > .md-nav__link {
-    font-weight: 700; /* Knowledge Base */
+nav .md-nav__item--section:nth-child(5) > .md-nav__link {
+    font-weight: 700; /* 🏃‍♂️ GETTING STARTED */
 }
 
-/* Показывать полный список разделов в мобильном меню */
+nav .md-nav__item--section:nth-child(6) > .md-nav__link {
+    font-weight: 700; /* 💡 Knowledge Base */
+}
+
+
+/* === МОБИЛЬНОЕ МЕНЮ === */
 @media screen and (max-width: 76.1875em) {
-  /* Открываем боковую панель с полным списком */
-  .md-nav--primary .md-nav__item--active > .md-nav__link {
-    pointer-events: none;
+  
+  /* Скрываем заголовок "Start here" в мобильном меню */
+  .md-nav--primary .md-nav__title {
+    display: none;
   }
   
-  /* Скрываем вложенный активный раздел, показываем корневое меню */
+  /* Убираем смещение вложенного меню — показываем всё на одном уровне */
+  .md-nav--primary .md-nav__list {
+    transform: none !important;
+  }
+  
+  /* Скрываем автоматически раскрытый активный раздел */
   .md-nav--primary .md-nav__item--active > .md-nav {
     display: none;
   }
   
-  /* Принудительно показываем корневую навигацию */
-  .md-nav--primary > .md-nav__list > .md-nav__item > .md-nav {
-    display: block !important;
-    opacity: 1 !important;
-    transform: translateX(0) !important;
+  /* Принудительно показываем все корневые разделы */
+  .md-nav--primary > .md-nav__list > .md-nav__item {
+    display: block;
   }
   
-  /* Сбрасываем позицию меню */
-  .md-nav--primary .md-nav {
-    position: static;
+  /* Убираем стрелку "назад" у активного раздела */
+  .md-nav--primary .md-nav__item--active > .md-nav__link--active {
     background: transparent;
+    box-shadow: none;
+  }
+  
+  /* Все ссылки на одном уровне */
+  .md-nav--primary .md-nav__link {
+    padding-left: 0.6rem;
   }
 }
