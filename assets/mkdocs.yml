@@ -1,10 +1,10 @@
 site_name: Nabu Documentation
 # Markdown lives in repo root; config file is under assets/
-docs_dir: ..
+# docs_dir: ..
 exclude_docs: |
   README.md
 # Build output must sit outside docs_dir (cannot use default assets/site)
-site_dir: ../../.mkdocs-site
+# site_dir: ../../.mkdocs-site
 theme:
   name: material
   logo: assets/images/image.avif
