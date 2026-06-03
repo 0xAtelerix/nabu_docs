@@ -91,7 +91,8 @@
     });
   }
 
-  function openClickedSection(label) {
+  /** Prepare UI before the browser handles the label click (one tap). */
+  function prepareSectionOpen(label) {
     var primary = getPrimaryNav();
     var toggle = label && document.getElementById(label.htmlFor);
     var section = toggle && toggle.closest('.md-nav__item--section');
@@ -104,14 +105,10 @@
       t.checked = false;
       delete t.dataset.nabuWasChecked;
     });
-    toggle.checked = true;
 
     document.documentElement.classList.remove(INTRO_CLASS);
     document.documentElement.classList.add(PICK_CLASS);
     resetNavTransforms();
-
-    /* Same user gesture — no second tap */
-    label.click();
 
     setTimeout(function () {
       clearPickState();
@@ -159,9 +156,8 @@
         );
         if (!label) return;
 
-        e.preventDefault();
-        e.stopImmediatePropagation();
-        openClickedSection(label);
+        /* Do not block the click — only prepare, then the browser opens the section */
+        prepareSectionOpen(label);
       },
       true
     );
