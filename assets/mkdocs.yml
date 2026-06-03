@@ -17,8 +17,8 @@ theme:
     - content.code.annotate
   palette:
     - scheme: default
-      primary: teal
-#      primary: deep orange
+#      primary: teal
+      primary: deep orange
 #      primary: indigo
       accent: indigo
       toggle:
