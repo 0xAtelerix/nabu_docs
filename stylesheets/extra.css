@@ -52,11 +52,15 @@ h1, h2, h3, h4, h5, h6 {
  * Class is set/removed by assets/javascripts/extra.js
  */
 @media screen and (max-width: 76.234375em) {
-  html.nabu-nav-root-intro .md-nav--primary > .md-nav__list {
+  html.nabu-nav-root-intro .md-sidebar--primary .md-nav--primary > .md-nav__list {
     transform: none !important;
   }
 
-  html.nabu-nav-root-intro .md-nav--primary .md-nav__item--section > .md-nav {
+  /* Hide drilled-in section panels so only top-level categories show */
+  html.nabu-nav-root-intro .md-sidebar--primary .md-nav--primary .md-nav__item--section > .md-nav,
+  html.nabu-nav-root-intro .md-sidebar--primary .md-nav--primary .md-nav__item--active > .md-nav {
     display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
   }
 }

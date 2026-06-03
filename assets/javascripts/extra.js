@@ -1,8 +1,8 @@
-/* Mobile: first drawer open per session → all categories; later → default Material. */
+/* Mobile: first menu open after each page load shows all categories. */
 (function () {
   var MQ = '(max-width: 76.234375em)';
-  var STORAGE_KEY = 'nabu_mobile_nav_root_v2';
   var INTRO_CLASS = 'nabu-nav-root-intro';
+  var firstMenuOpen = true;
 
   function isMobile() {
     return window.matchMedia(MQ).matches;
@@ -24,32 +24,36 @@
 
   function disableIntroView() {
     document.documentElement.classList.remove(INTRO_CLASS);
-    resetNavTransforms();
   }
 
   function scheduleIntroReset() {
-    requestAnimationFrame(function () {
-      requestAnimationFrame(resetNavTransforms);
+    [0, 50, 150, 300, 500].forEach(function (delay) {
+      setTimeout(resetNavTransforms, delay);
     });
-    setTimeout(resetNavTransforms, 50);
-    setTimeout(resetNavTransforms, 150);
-    setTimeout(resetNavTransforms, 300);
-  }
 
-  function onFirstDrawerOpen() {
-    if (!isMobile()) return;
-    if (sessionStorage.getItem(STORAGE_KEY)) return;
+    var primary = document.querySelector('.md-nav--primary');
+    if (!primary) return;
 
-    sessionStorage.setItem(STORAGE_KEY, '1');
-    enableIntroView();
-    scheduleIntroReset();
+    var observer = new MutationObserver(resetNavTransforms);
+    observer.observe(primary, {
+      attributes: true,
+      attributeFilter: ['style', 'class'],
+      subtree: true,
+    });
+    setTimeout(function () {
+      observer.disconnect();
+    }, 600);
   }
 
   var drawer = document.getElementById('__drawer');
   if (drawer) {
     drawer.addEventListener('change', function (e) {
       if (e.target.checked) {
-        onFirstDrawerOpen();
+        if (firstMenuOpen && isMobile()) {
+          firstMenuOpen = false;
+          enableIntroView();
+          scheduleIntroReset();
+        }
       } else {
         disableIntroView();
       }
