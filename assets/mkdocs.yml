@@ -18,8 +18,8 @@ theme:
   palette:
     - scheme: default
       # primary: teal
-      primary: deep orange
-#      primary: indigo
+#      primary: deep orange
+      primary: indigo
       accent: indigo
       toggle:
         icon: material/brightness-7
@@ -61,5 +61,3 @@ plugins:
 #  - section-index
 #  - material-plausible
 #  - git-revision-date-localized
-extra_javascript:
-  - assets/javascripts/extra.js
