@@ -2,6 +2,8 @@
 (function () {
   var MQ = '(max-width: 76.234375em)';
   var INTRO_CLASS = 'nabu-nav-root-intro';
+  var PICK_CLASS = 'nabu-nav-picking';
+  var PICK_TARGET_CLASS = 'nabu-nav-pick';
   var firstMenuOpen = true;
 
   function isMobile() {
@@ -43,6 +45,15 @@
     });
   }
 
+  function clearPickState() {
+    document.documentElement.classList.remove(PICK_CLASS);
+    var primary = getPrimaryNav();
+    if (!primary) return;
+    primary.querySelectorAll('.' + PICK_TARGET_CLASS).forEach(function (el) {
+      el.classList.remove(PICK_TARGET_CLASS);
+    });
+  }
+
   function enableIntroView() {
     document.documentElement.classList.add(INTRO_CLASS);
     saveToggleState();
@@ -57,29 +68,37 @@
     resetNavTransforms();
   }
 
-  function scheduleIntroReset() {
-    [0, 50, 150, 300, 500].forEach(function (delay) {
-      setTimeout(resetNavTransforms, delay);
-    });
+  function goToRootMenu() {
+    if (!isMobile()) return;
 
     var primary = getPrimaryNav();
     if (!primary) return;
 
-    var observer = new MutationObserver(resetNavTransforms);
-    observer.observe(primary, {
-      attributes: true,
-      attributeFilter: ['style', 'class'],
-      subtree: true,
+    clearPickState();
+
+    primary.querySelectorAll('.md-nav__item--section > .md-nav__toggle').forEach(function (t) {
+      t.checked = false;
+      delete t.dataset.nabuWasChecked;
     });
-    setTimeout(function () {
-      observer.disconnect();
-    }, 600);
+
+    document.documentElement.classList.add(INTRO_CLASS);
+    resetNavTransforms();
+  }
+
+  function scheduleIntroReset() {
+    [0, 50, 150, 300].forEach(function (delay) {
+      setTimeout(resetNavTransforms, delay);
+    });
   }
 
   function openClickedSection(label) {
     var primary = getPrimaryNav();
     var toggle = label && document.getElementById(label.htmlFor);
-    if (!primary || !toggle) return;
+    var section = toggle && toggle.closest('.md-nav__item--section');
+    if (!primary || !toggle || !section) return;
+
+    clearPickState();
+    section.classList.add(PICK_TARGET_CLASS);
 
     primary.querySelectorAll('.md-nav__item--section > .md-nav__toggle').forEach(function (t) {
       t.checked = false;
@@ -87,16 +106,17 @@
     });
     toggle.checked = true;
 
-    disableIntroView(false);
+    document.documentElement.classList.remove(INTRO_CLASS);
+    document.documentElement.classList.add(PICK_CLASS);
+    resetNavTransforms();
 
-    requestAnimationFrame(function () {
-      requestAnimationFrame(function () {
-        resetNavTransforms();
-        label.dispatchEvent(
-          new MouseEvent('click', { bubbles: true, cancelable: true, view: window })
-        );
-      });
-    });
+    /* Same user gesture — no second tap */
+    label.click();
+
+    setTimeout(function () {
+      clearPickState();
+      resetNavTransforms();
+    }, 320);
   }
 
   var drawer = document.getElementById('__drawer');
@@ -109,6 +129,7 @@
           scheduleIntroReset();
         }
       } else {
+        clearPickState();
         disableIntroView(true);
       }
     });
@@ -119,6 +140,18 @@
     primary.addEventListener(
       'click',
       function (e) {
+        if (!isMobile()) return;
+
+        var back = e.target.closest('.md-nav--primary .md-nav .md-nav__title');
+        if (back) {
+          if (document.documentElement.classList.contains(INTRO_CLASS)) return;
+
+          e.preventDefault();
+          e.stopImmediatePropagation();
+          goToRootMenu();
+          return;
+        }
+
         if (!document.documentElement.classList.contains(INTRO_CLASS)) return;
 
         var label = e.target.closest(

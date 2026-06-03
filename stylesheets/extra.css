@@ -48,19 +48,28 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*
- * First mobile menu open per session: show top-level categories only.
- * Class is set/removed by assets/javascripts/extra.js
+ * Mobile nav helpers (assets/javascripts/extra.js)
  */
 @media screen and (max-width: 76.234375em) {
+
   html.nabu-nav-root-intro .md-sidebar--primary .md-nav--primary > .md-nav__list {
     transform: none !important;
   }
 
-  /* Hide drilled-in section panels so only top-level categories show */
   html.nabu-nav-root-intro .md-sidebar--primary .md-nav--primary .md-nav__item--section > .md-nav,
   html.nabu-nav-root-intro .md-sidebar--primary .md-nav--primary .md-nav__item--active > .md-nav {
     display: none !important;
     visibility: hidden !important;
     pointer-events: none !important;
+  }
+
+  html.nabu-nav-picking .md-sidebar--primary .md-nav--primary .md-nav__item--section > .md-nav {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  html.nabu-nav-picking .md-sidebar--primary .md-nav--primary .md-nav__item--section.nabu-nav-pick > .md-nav {
+    display: block !important;
+    visibility: visible !important;
   }
 }
