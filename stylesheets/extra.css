@@ -46,3 +46,17 @@ h1, h2, h3, h4, h5, h6 {
 .md-nav__item .md-nav__list {
     margin-left: 16px !important;
 }
+
+/*
+ * First mobile menu open per session: show top-level categories only.
+ * Class is set/removed by assets/javascripts/extra.js
+ */
+@media screen and (max-width: 76.234375em) {
+  html.nabu-nav-root-intro .md-nav--primary > .md-nav__list {
+    transform: none !important;
+  }
+
+  html.nabu-nav-root-intro .md-nav--primary .md-nav__item--section > .md-nav {
+    display: none !important;
+  }
+}
