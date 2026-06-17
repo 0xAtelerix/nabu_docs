@@ -42,7 +42,6 @@ Important: If you lose the Secret Key, you cannot retrieve it from MEXC. You wil
 <figure><img src="/assets/images/unknown (5).png" alt="" width="563"><figcaption></figcaption></figure>
 
 
-
 9. Add funds. In Settings, scroll to the Trading Wallet section. The Deposit card shows your Wallet Address (with a copy icon), an Amount field, and a Coin dropdown.
 
 <figure><img src="/assets/images/unknown (6).png" alt="" width="451"><figcaption></figcaption></figure>
@@ -68,4 +67,5 @@ Important: If you lose the Secret Key, you cannot retrieve it from MEXC. You wil
 13. A Draft badge confirms the strategy isn't live yet. When you're happy with it, click \[Deploy strategy] (top-right of the card) to launch it.
 
 <figure><img src="/assets/images/unknown (9).png" alt="" width="563"><figcaption></figcaption></figure>
+
 
