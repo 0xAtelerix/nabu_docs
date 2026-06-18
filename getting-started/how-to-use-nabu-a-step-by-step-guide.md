@@ -6,7 +6,7 @@
 
 <div align="center"><img src="/assets/images/unknown.png" alt="" width="563"><figcaption></figcaption></div>
 
-3. After logging in, the You're on the waitlist screen appears. Enter your 8-character invite code in the format XXXX-XXXX and click \[Enter Nabu].
+2. After logging in, the You're on the waitlist screen appears. Enter your 8-character invite code in the format XXXX-XXXX and click \[Enter Nabu].
 
 <div align="center"><img src="/assets/images/full-size-preview.png" alt="" width="500"><figcaption></figcaption></div>
 
