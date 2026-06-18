@@ -1,7 +1,8 @@
-site_name: Nabu Documentation
+site_name: Nabu
 theme:
   name: material
-  logo: assets/images/image.avif
+  logo: assets/images/nabu-logo.png
+  favicon: assets/images/nabu-favicon.png
   #  name: gitbook
   features:
     - navigation.sections
