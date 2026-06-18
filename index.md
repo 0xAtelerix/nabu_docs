@@ -31,7 +31,7 @@ Distribution and coordination are embedded into the strategy lifecycle. Strategy
 
 Nabu is an AI-native platform for building, testing, and deploying automated trading and arbitrage strategies across DEXs and CEXs.
 
-It is built for execution: generate many strategy variants fast, verify them deterministically, simulate outcomes before taking risk, then deploy the best version with hard policy controls such as oss caps, slippage limits, venue allowlists, and a kill switch.
+It is built for execution: generate many strategy variants fast, verify them deterministically, simulate outcomes before taking risk, then deploy the best version with hard policy controls such as loss caps, slippage limits, venue allowlists, and a kill switch.
 
 Nabu is the flagship dApp on [Pelagos](https://docs.pelagos.network). Pelagos provides the decentralized execution substrate Nabu depends on: a validator-produced canonical stream of attested events, finality signals, state diffs, and records. This removes the need for bespoke infrastructure stacks and trusted backends by leveraging network-driven execution records that are consistent and auditable.
 
