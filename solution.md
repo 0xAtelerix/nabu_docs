@@ -71,7 +71,7 @@ Nabu is built for strategy classes where timing, data freshness, and operational
 
 * **Event-driven triggers:** avoids polling intervals as the dominant term in reaction time.
 * **Canonical inputs:** Pelagos provides a fresh, consistent stream of market-relevant inputs.
-* **Time-to-first-action:** At launch, Nabu targets \~250ms p50 from relevant event to outbound transaction/order request.
+* **Time-to-first-action:** At launch, Nabu targets ~250ms p50 from relevant event to outbound transaction/order request.
 
 ![Vision diagram](assets/images/image (6).png)
 

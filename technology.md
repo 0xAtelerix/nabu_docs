@@ -49,20 +49,20 @@ Nabu’s policy model implements execution-grade risk controls across multiple l
 Trusted execution environments are relied on for confidentiality, integrity, and attestation, but are treated as fallible components rather than sources of availability guarantees.
 
 * Core exposure limits:
-  * Max position size per asset; max gross/net exposure; concentration limits.
-  * Max leverage and margin utilization (derivatives).
+    * Max position size per asset; max gross/net exposure; concentration limits.
+    * Max leverage and margin utilization (derivatives).
 * Pre-trade validations:
-  * Order size caps; notional caps; price collars / price band checks; fat-finger protection.
-  * Slippage ceilings; minimum liquidity checks; gas/fee ceilings (where applicable).
+    * Order size caps; notional caps; price collars / price band checks; fat-finger protection.
+    * Slippage ceilings; minimum liquidity checks; gas/fee ceilings (where applicable).
 * Execution throttles and stability:
-  * Rate limits / order throttles; max open orders; cancel-on-disconnect equivalents.
-  * Cooldowns after repeated failures or consecutive losses.
-  * Latency watchdogs, heartbeat requirements, and timeouts.
+    * Rate limits / order throttles; max open orders; cancel-on-disconnect equivalents.
+    * Cooldowns after repeated failures or consecutive losses.
+    * Latency watchdogs, heartbeat requirements, and timeouts.
 * Data sanity and manipulation resistance:
-  * Oracle deviation guards; stale-data checks; cross-source consistency checks
-  * Venue status checks (halts, degraded mode), circuit breakers
+    * Oracle deviation guards; stale-data checks; cross-source consistency checks
+    * Venue status checks (halts, degraded mode), circuit breakers
 * Operational controls:
-  * Kill switch (global and per-strategy); venue allowlists/denylists
-  * Key permission scoping; audit logs/receipts; emergency rotation procedures
+    * Kill switch (global and per-strategy); venue allowlists/denylists
+    * Key permission scoping; audit logs/receipts; emergency rotation procedures
 
 These controls track established industry practice for automated trading risk management (pre-trade checks, throttles, kill-switches, and volatility controls).

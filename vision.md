@@ -12,7 +12,7 @@ Nabu supports a strategy lifecycle that enables rapid iteration without sacrific
 
 * **Strategy creation:** rapidly generate dozens to hundreds of strategy variants, verify them deterministically, test them, and select the best-performing version.
 * **Research-first evaluation:** simulate execution, compute Profit and Loss (PnL) and risk metrics, and rank variants before taking real market risk.
-* **Execution-grade automation:** execute strategies via event-driven automation with sub-second time-to-first-action. The MVP target is \~250ms p50 from market-relevant event to outbound transaction or order request, with venue-dependent confirmation.
+* **Execution-grade automation:** execute strategies via event-driven automation with sub-second time-to-first-action. The MVP target is ~250ms p50 from market-relevant event to outbound transaction or order request, with venue-dependent confirmation.
 * **Intent-based execution and solvers:** strategies specify desired outcomes as intents. Solvers translate those intents into concrete execution, starting with a first-party solver and expanding to verified partners and third-party plugins.
 * **Agent-driven iteration:** multiple agent-generated variants are evaluated in simulation, promoted or iterated based on objective performance metrics, and retired when they underperform. Natural selection in action.
 
