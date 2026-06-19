@@ -1,10 +1,8 @@
 ---
-proofedDate: none
 title: Roadmap
-content: >-
+description: >-
   What functionality is available today versus what is planned, and how
   execution, safety, and strategy capabilities evolve over time.
-notes: ''
 ---
 
 # Roadmap

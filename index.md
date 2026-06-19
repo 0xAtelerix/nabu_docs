@@ -1,10 +1,6 @@
 ---
-proofedDate: none
 title: Introduction
-
-  What Nabu is and how its execution-grade systems build, evaluate, and run
-  automated, constrained onchain strategies at scale.
-
+description: What Nabu is and how its execution-grade systems build, evaluate, and run automated, constrained onchain strategies at scale.
 ---
 
 # Introduction

@@ -1,10 +1,8 @@
 ---
-proofedDate: none
-title: 'The solution: Nabu'
-content: >-
+title: 'The Solution: Nabu'
+description: >-
   How Nabu addresses execution, verification, safety, and distribution as a
   single integrated system.
-notes: ''
 ---
 
 # The Solution: Nabu

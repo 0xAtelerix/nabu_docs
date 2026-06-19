@@ -1,4 +1,6 @@
 site_name: Nabu
+site_url: https://tdocs.nabu.pro
+site_description: Documentation for Nabu — an AI-native platform for building, testing, and running automated crypto trading and arbitrage strategies.
 theme:
   name: material
   logo: assets/images/nabu-logo.png
@@ -52,7 +54,7 @@ nav:
       - Roadmap: roadmap.md
       - Nabu technology: technology.md
   - 🏃‍♂️ GETTING STARTED:
-      - "How to use nabu: a step by step guide": getting-started/how-to-use-nabu-a-step-by-step-guide.md
+      - "How to use Nabu: a step-by-step guide": getting-started/how-to-use-nabu-a-step-by-step-guide.md
   - 💡 Knowledge Base:
       - Glossary: glossary.md
 

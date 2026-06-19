@@ -1,11 +1,9 @@
 ---
-proofedDate: none
 title: Nabu technology
-content: >-
+description: >-
   A technical overview of Nabu’s execution model, trust boundaries, key
   management, and risk controls, clarifying how confidential strategies are
   executed safely and verifiably.
-notes: ''
 ---
 
 # Nabu technology

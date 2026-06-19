@@ -1,11 +1,9 @@
 ---
-proofedDate: none
 title: Ecosystem & economics
-content: >-
+description: >-
   How an execution-grade ecosystem aligns venues, solvers, wallets, and
   infrastructure providers around shared interfaces, incentives, and verifiable
   execution.
-notes: ''
 ---
 
 # Ecosystem & economics

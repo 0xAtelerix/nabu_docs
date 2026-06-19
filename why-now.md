@@ -1,3 +1,10 @@
+---
+title: Why now?
+description: >-
+  LLMs reduce the cost of expressing strategy hypotheses; the bottleneck is now
+  verification, safety, and execution-grade automation that can run unattended.
+---
+
 # Why now?
 
 LLMs drastically reduce the cost of expressing strategy hypotheses. They move the bottleneck to verification, safety, and execution. The challenge now is how to turn many hypotheses into deterministic, low-latency automation that can run unattended.

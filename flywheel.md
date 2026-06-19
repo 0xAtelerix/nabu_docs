@@ -1,11 +1,9 @@
 ---
-proofedDate: none
 title: Strategy flywheel
-content: >-
+description: >-
   How confidential execution, objective performance measurement, and
   distribution reinforce each other to create a self-improving execution and
   strategy ecosystem.
-notes: ''
 ---
 
 # Strategy flywheel

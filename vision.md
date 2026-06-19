@@ -1,3 +1,10 @@
+---
+title: Vision
+description: >-
+  Nabu as the crypto strategy superapp — one surface to create, execute,
+  coordinate, and distribute automated strategies across the entire crypto stack.
+---
+
 # Vision
 
 The long-term shift is clear, crypto won’t be operated by humans clicking through ten interfaces. It will be operated by strategies. People will describe outcomes and constraints, and automation will do the repetitive work: monitoring, moving capital, executing actions, handling retries, and stopping safely when conditions break.

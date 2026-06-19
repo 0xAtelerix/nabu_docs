@@ -1,10 +1,8 @@
 ---
-proofedDate: none
 title: Glossary
-content: >-
+description: >-
   A shared set of definitions and acronyms to ensure consistent understanding of
   technical, cryptographic, and system terms used throughout the documentation.
-notes: ''
 ---
 
 # Glossary
