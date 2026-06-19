@@ -3,6 +3,7 @@ site_url: https://tdocs.nabu.pro
 site_description: Documentation for Nabu — an AI-native platform for building, testing, and running automated crypto trading and arbitrage strategies.
 theme:
   name: material
+  custom_dir: ../overrides
   logo: assets/images/nabu-logo.png
   favicon: assets/images/nabu-favicon.png
   #  name: gitbook
