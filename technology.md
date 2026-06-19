@@ -12,7 +12,7 @@ notes: ''
 
 ### Pelagos and sequencing
 
-* **Block time target:** \~250–360ms internal blocks, with optional centralized sequencing for specific performance modes.
+* **Block time target:** ~250–360ms internal blocks, with optional centralized sequencing for specific performance modes.
 * **Consensus and consumption:** validators run full nodes for external chains and confirm blocks/receipts in a Directed Acyclic Graph (DAG)-based consensus; applications consume state diffs and receipts as a stream.
 
 ### Confidential strategy execution (high level)
