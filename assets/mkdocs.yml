@@ -1,21 +1,16 @@
 site_name: Nabu
 site_url: https://docs.nabu.pro
 site_description: Documentation for Nabu — an AI-native platform for building, testing, and running automated crypto trading and arbitrage strategies.
-# Markdown lives in repo root; config file is under assets/
-docs_dir: ..
 exclude_docs: |
   README.md
 theme:
   name: material
-  custom_dir: ../overrides
+  custom_dir: overrides
   logo: assets/images/nabu-logo.png
   favicon: assets/images/nabu-favicon.png
-  #  name: gitbook
   features:
     - navigation.sections
     - navigation.expand
-    # - navigation.tabs
-    # - navigation.sections
     - navigation.top
     - search.suggest
     - search.highlight
@@ -25,8 +20,6 @@ theme:
     - content.code.annotate
   palette:
     - scheme: default
-#      primary: teal
-#      primary: deep orange
       primary: indigo
       accent: indigo
       toggle:
@@ -67,8 +60,5 @@ nav:
 plugins:
   - search
   - tags
-#  - section-index
-#  - material-plausible
-#  - git-revision-date-localized
 extra_javascript:
   - assets/javascripts/extra.js
