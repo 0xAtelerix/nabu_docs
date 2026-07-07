@@ -1,11 +1,11 @@
 ---
-title: 'How to use Nabu: a step-by-step guide'
+title: 'How to connect MEXC to Nabu: a step-by-step guide'
 description: >-
   Log in, enter your invite code, connect MEXC, fund your trading wallet, and
   deploy your first strategy on Nabu.
 ---
 
-# How to use Nabu: a step-by-step guide
+# How to connect MEXC to Nabu: a step-by-step guide
 
 ## Start
 
