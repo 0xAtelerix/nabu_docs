@@ -1,38 +1,24 @@
-## Readme
+# Nabu docs
 
-This GitBook site syncs with a [GitHub repository](https://github.com/0xAtelerix/nabu_docs.git
-) and serves the product https://nabu.pro/.
+Source for [docs.nabu.pro](https://docs.nabu.pro) — documentation for [nabu.pro](https://nabu.pro).
 
-The .gitbook.yaml is overriding the use of the root readme now.
+Built with [MkDocs Material](https://squidfunk.github.io/mkdocs-material/). Page content lives in `docs/`. Site config is `mkdocs.yml`.
 
-## Page metadata
-
-GitBook loves its meta:
-
-proofedDate: none // when set, can be used to trigger re-review & as rough versioning
-title: doesn't get used by GitBook // being used at SEO hail mary, no idea if it's built to page
-content: This is acting like normal description 
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install mkdocs-material
+mkdocs serve
+```
 
 ## Style
 
 - American English.
 - Oxford comma.
-- Numbered and bullet lists have stops.
-- Colon-led bullets have lower case 
-  > - Trust-minimized interoperability: cross-chain execution and liquidity are settled via cryptographic guarantees, not off-chain relayers or custodial bridges.
+- Sentence case for headings.
+- onchain / offchain (hyphen only for cross-chain).
+- dApp, web3.
+- Numbered and bullet lists end with periods.
+- Colon-led bullets stay lowercase after the colon.
 
-  
 Google developer style guide: [developers.google.com/style](https://developers.google.com/style)
-
-### Highlights from guide
-
-- Sentence case (including headings)
-- Be woke-ish: Allowlist 
-- Concatenate
-	- onchain not on-chain, offchain not off-chain
-  (cross-chain uses)
-
-### Variants
-
-dApp not DApp or dapp
-web3 not Web3

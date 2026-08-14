@@ -1,3 +1,40 @@
+(function () {
+  function isInternalLink(link) {
+    var href = link.getAttribute("href");
+    if (!href || href.charAt(0) === "#" || href.indexOf("javascript:") === 0) {
+      return true;
+    }
+    if (href.indexOf("mailto:") === 0 || href.indexOf("tel:") === 0) {
+      return false;
+    }
+    try {
+      var url = new URL(link.href, window.location.href);
+      if (url.protocol !== "http:" && url.protocol !== "https:") {
+        return true;
+      }
+      return url.hostname === window.location.hostname;
+    } catch (e) {
+      return true;
+    }
+  }
+
+  function openExternalLinksInNewTab() {
+    document.querySelectorAll("a[href]").forEach(function (link) {
+      if (isInternalLink(link)) {
+        return;
+      }
+      link.setAttribute("target", "_blank");
+      link.setAttribute("rel", "noopener noreferrer");
+    });
+  }
+
+  if (typeof document$ !== "undefined" && document$.subscribe) {
+    document$.subscribe(openExternalLinksInNewTab);
+  } else {
+    document.addEventListener("DOMContentLoaded", openExternalLinksInNewTab);
+  }
+})();
+
 /* Mobile: first menu open after each page load shows all categories. */
 (function () {
   var MQ = '(max-width: 76.234375em)';
