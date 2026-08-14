@@ -1,0 +1,66 @@
+site_name: Nabu
+site_url: https://docs.nabu.pro
+site_description: Documentation for Nabu — an AI-native platform for building, testing, and running automated crypto trading and arbitrage strategies.
+# CI copies this file to /docs/mkdocs.yml while the repo lives in /docs/docs.
+# Pages are in repo docs/, theme overrides stay at repo root.
+docs_dir: docs/docs
+theme:
+  name: material
+  custom_dir: docs/overrides
+  logo: assets/images/nabu-logo.png
+  favicon: assets/images/nabu-favicon.png
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+    - content.code.annotate
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+extra_css:
+  - stylesheets/extra.css
+nav:
+  - 🧭 Start here:
+      - Introduction: index.md
+      - Vision: vision.md
+      - Why now?: why-now.md
+  - 🧠 The Challenge:
+      - The challenge: challenge.md
+  - ✅ The Solution:
+      - "The Solution: Nabu": solution.md
+      - Strategy flywheel: flywheel.md
+      - Ecosystem & economics: ecosystems.md
+  - 🛠️ Nabu technology:
+      - Roadmap: roadmap.md
+      - Nabu technology: technology.md
+  - 🏃‍♂️ Getting started:
+      - Connect Hyperliquid: getting-started/how-to-connect-hyperliquid-to-nabu-a-step-by-step-guide.md
+      - Connect Binance: getting-started/how-to-connect-binance-to-nabu-a-step-by-step-guide.md
+      - Connect MEXC: getting-started/how-to-connect-mexc-to-nabu-a-step-by-step-guide.md
+  - 💡 Knowledge Base:
+      - Glossary: glossary.md
+
+plugins:
+  - search
+  - tags
+extra_javascript:
+  - assets/javascripts/extra.js
