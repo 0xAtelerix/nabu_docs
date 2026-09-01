@@ -10,7 +10,7 @@ description: >-
 
 ## Step 1: Start the connection in Nabu
 
-1\. Go to [app.nabu.pro](https://app.nabu.pro/?settings=profile) and click on the cogwheel next to your username.
+1\. Go to [app.nabu.pro](https://app.nabu.pro/) and click on the cogwheel next to your username.
 
 <figure><img src="../../assets/images/hyperliquid-step-1-cogwheel.png" alt="Nabu header with the settings cogwheel next to the username" width="442"></figure>
 
