@@ -10,7 +10,7 @@ description: >-
 
 ## Step 1: Start the connection in Nabu
 
-1\. Go to [app.nabu.pro](https://app.nabu.pro/) and click on the cogwheel next to your username.
+1\. Go to [app.nabu.pro](https://app.nabu.pro/?settings=profile) and click on the cogwheel next to your username.
 
 <figure><img src="../../assets/images/hyperliquid-step-1-cogwheel.png" alt="Nabu header with the settings cogwheel next to the username" width="442"></figure>
 
@@ -24,19 +24,9 @@ description: >-
 
 <figure><img src="../../assets/images/binance-step-3-create-api.png" alt="Binance Create API button" width="624"></figure>
 
-4\. For futures and spot, make sure that the following fields are ticked: **Enable Futures** and **Enable Spot & Margin & Stock Trading**.
+4\. Once the API is created, save the API key and Secret and click on **Edit Restrictions**.
 
-<figure><img src="../../assets/images/binance-step-4-permissions.png" alt="Binance API permission checkboxes for futures and spot" width="624"></figure>
-
-Note: for Futures make sure that you have your account set up and available funds.
-
-<figure><img src="../../assets/images/binance-step-4-futures-note.png" alt="Binance futures account setup notice" width="466"></figure>
-
-5\. Tick the **Enable Symbol Whitelist** field and ensure to add assets that you would like to whitelist for trading purposes.
-
-<figure><img src="../../assets/images/binance-step-5-whitelist.png" alt="Binance Enable Symbol Whitelist settings" width="496"></figure>
-
-6\. In the **IP access restrictions** field select **Restrict access to trusted IPs only (Recommended)** and use all of the IP addresses indicated below:
+5\. First, in the **IP access restrictions** field select **Restrict access to trusted IPs only (Recommended)** and use all of the IP addresses indicated below:
 
 - `103.54.18.179`
 - `103.54.18.213`
@@ -50,10 +40,22 @@ Note: for Futures make sure that you have your account set up and available fund
 
 <figure><img src="../../assets/images/binance-step-6-ip-restrictions.png" alt="Binance IP access restrictions field" width="624"></figure>
 
-7\. Once completed, save the changes and head back to [app.nabu.pro](https://app.nabu.pro).
+6\. For futures and spot, make sure that the following fields are ticked: **Enable Futures** and **Enable Spot & Margin & Stock Trading**.
+
+<figure><img src="../../assets/images/binance-step-4-permissions.png" alt="Binance API permission checkboxes for futures and spot" width="624"></figure>
+
+Note: for Futures make sure that you have your account set up and available funds.
+
+<figure><img src="../../assets/images/binance-step-4-futures-note.png" alt="Binance futures account setup notice" width="466"></figure>
+
+7\. Tick the **Enable Symbol Whitelist** field and ensure to add assets that you would like to whitelist for trading purposes.
+
+<figure><img src="../../assets/images/binance-step-5-whitelist.png" alt="Binance Enable Symbol Whitelist settings" width="496"></figure>
+
+8\. Once completed, save the changes and head back to [app.nabu.pro](https://app.nabu.pro).
 
 ## Step 3: Nabu exchange settings
 
-8\. Head back to the settings and enter your API Key and API Secret for Binance.
+9\. Head back to the settings and enter your API Key and API Secret for Binance.
 
 <figure><img src="../../assets/images/binance-step-8-api-keys.png" alt="Nabu settings fields for Binance API Key and API Secret" width="624"></figure>
