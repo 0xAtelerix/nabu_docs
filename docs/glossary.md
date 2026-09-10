@@ -7,13 +7,13 @@ description: >-
 
 # Glossary
 
-Providing acronyms and definitions.
+Acronyms and definitions used across the Nabu documentation.
 
 ## A
 
 ### Application transaction
 
-A transaction signed by a user and submitted to a specific application's RPC endpoint to modify or interact with that application's state.
+A transaction signed by a user and submitted to a specific application’s RPC endpoint to modify or interact with that application’s state.
 
 ## C
 
@@ -27,13 +27,13 @@ The protocol layer responsible for ordering transactions and achieving agreement
 
 ## D
 
-### DEX
-
-A decentralized exchange. An onchain, non-custodial venue that enables peer-to-peer swaps via smart contracts or automated market makers.
-
 ### DAG (Directed Acyclic Graph)
 
 A data structure used to represent transactions or blocks that are linked but do not form a linear chain. DAG allows multiple events to be processed in parallel, increasing throughput and scalability.
+
+### DEX
+
+A decentralized exchange. An onchain, non-custodial venue that enables peer-to-peer swaps via smart contracts or automated market makers.
 
 ### DKG (Distributed Key Generation)
 
@@ -43,19 +43,19 @@ A protocol by which a group of validators generates the private key shares used 
 
 ### Encryption
 
-Encryption is the process of converting information or data into a code; it's essential to prevent unauthorized access. Encryption is fundamental to securing data in transit and at rest across networks and systems.
-
-### External transaction
-
-Any final outcome/transaction produced via TSS is then sent out to external L1/L2 networks.
+Encryption is the process of converting information or data into a code; it’s essential to prevent unauthorized access. Encryption is fundamental to securing data in transit and at rest across networks and systems.
 
 ### Epoch
 
-A fixed period of time (or a number of blocks) in which applications execute transactions, produce blocks and generate a checkpoint. Once an epoch concludes, validators finalize the resulting checkpoint before moving on to the next epoch.
+A fixed period of time (or a number of blocks) in which applications execute transactions, produce blocks, and generate a checkpoint. Once an epoch concludes, validators finalize the resulting checkpoint before moving on to the next epoch.
 
 ### Epoch finalization
 
 The process by which validators reach consensus on and commit the state checkpoint for a given epoch, making it immutable and agreed upon by the network.
+
+### External transaction
+
+A final outcome or transaction produced via TSS and sent out to external L1/L2 networks.
 
 ## F
 
@@ -73,25 +73,25 @@ Gas sponsorships will be enabled with [EIP-7702](https://eip7702.io), allowing s
 
 ### Info-hash
 
-A cryptographic hash (similar to a BitTorrent “magnet” link) that identifies a chunk of immutable, incremental database (DB) data. It ensures data integrity—any node can fetch a specific DB file from peers, verify it against the hash, and trust that the file has not been tampered with.
+A cryptographic hash (similar to a BitTorrent “magnet” link) that identifies a chunk of immutable, incremental database (DB) data. It ensures data integrity — any node can fetch a specific DB file from peers, verify it against the hash, and trust that the file has not been tampered with.
 
 ## P
 
 ### Pelagos
 
-[Pelagos](https://docs.pelagos.network). Pelagos provides a native liquidity unification layer that enables atomic settlement of transactions across multiple blockchains. It's the decentralized execution substrate Nabu depends on: a validator-produced canonical stream of attested events, finality signals, state diffs, and records.
+[Pelagos](https://docs.pelagos.network). Pelagos provides a native liquidity unification layer that enables atomic settlement of transactions across multiple blockchains. It’s the decentralized execution substrate Nabu depends on: a validator-produced canonical stream of attested events, finality signals, state diffs, and records.
 
-### Proof of Stake
+### Proof of stake
 
-Under [Poof-of-Stake blockchains](https://en.wikipedia.org/wiki/Proof_of_stake) (PoS), staking is the locking of a token to support the blockchain operations. In return for staking your crypto, you may earn more cryptocurrency.
+Under [Proof-of-Stake blockchains](https://en.wikipedia.org/wiki/Proof_of_stake) (PoS), staking is the locking of a token to support the blockchain operations. In return for staking your crypto, you may earn more cryptocurrency.
 
-To validate PoS blockchains, validator Nodes must first “stake” set amounts of the native token for the chain to be in a position to validate new transactions and add new blocks.
+To validate PoS blockchains, validator nodes must first “stake” set amounts of the native token for the chain to be in a position to validate new transactions and add new blocks.
 
-The stake will be slashed (forefit) if the validator fails to build legitimate blocks. This ensures that only valid data and transactions are added to a blockchain. Validators are rewarded with the native token when they successfully add new blocks.
+The stake will be slashed (forfeited) if the validator fails to build legitimate blocks. This ensures that only valid data and transactions are added to a blockchain. Validators are rewarded with the native token when they successfully add new blocks.
 
 ### PSL
 
-Pelagos Strategy Language, is a constrained, verifiable, Domain-Specific Language (DSL) that gives the LLM fast, objective feedback about what is correct vs. invalid.
+Pelagos Strategy Language. A constrained, verifiable domain-specific language (DSL) that gives the LLM fast, objective feedback about what is correct vs. invalid.
 
 ## R
 
@@ -103,7 +103,7 @@ A transaction triggered by a control (or governance) contract in response to new
 
 ### Sybil
 
-A Sybil is essentially a copy. While each human individual is unique, Sybils are attempts to create multiple identities.
+A fake identity created to make one participant look like many. Sybil resistance is what stops a single actor from farming rewards or votes through duplicate accounts.
 
 ## T
 
@@ -113,7 +113,7 @@ Trusted Execution Environments (TEEs). In Nabu, strategies run inside TEEs — h
 
 ### TSS
 
-Threshold Signature Schemes (TSS). A cryptographic signing process where multiple validators collectively generate a single signature without revealing their individual secret keys. [Pelagos](https://docs.pelagos.network/) uses TSS to sign external transactions on various L1s, ensuring security through distributed key control and slashing for any malicious usage.
+Threshold Signature Schemes (TSS). A cryptographic signing process where multiple validators collectively generate a single signature without revealing their individual secret keys. [Pelagos](https://docs.pelagos.network) uses TSS to sign external transactions on various L1s, ensuring security through distributed key control and slashing for any malicious usage.
 
 ## V
 
@@ -123,4 +123,4 @@ A Pelagos open-source node that includes L1/L2 oracles, sequencing consensus, ap
 
 ### Validator set
 
-The pool of validators authorized to participate in Pelagos' DAG consensus and TSS signing. A majority (⅔+1 by stake) must sign blocks, checkpoints, and external transactions.
+The pool of validators authorized to participate in the Pelagos DAG consensus and TSS signing. A supermajority (⅔+1 by stake) must sign blocks, checkpoints, and external transactions.

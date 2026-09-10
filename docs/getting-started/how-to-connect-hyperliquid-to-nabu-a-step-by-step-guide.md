@@ -58,10 +58,8 @@ description: >-
 
 12\. In your wallet, open the imported account and click **Account details**.
 
-13\.
+<figure><img src="../../assets/images/hyperliquid-step-12-account-details.png" alt="Account menu for the imported wallet account, with Account details highlighted" width="261"></figure>
 
-<figure><img src="../../assets/images/hyperliquid-step-12-account-details.png" alt="Wallet account details for the imported account" width="261"></figure>
+13\. Copy your **private key**, return to the Nabu settings page, paste it into the **Private Key** field, and click **Link Exchange**.
 
-14\. Copy your **private key**, return to the Nabu settings page, and paste it into the **Private Key** field and click **Link Exchange**.
-
-<figure><img src="../../assets/images/hyperliquid-step-2-link-accounts.png" alt="Nabu Private Key field and Link Exchange button" width="624"></figure>
+<figure><img src="../../assets/images/hyperliquid-step-2-link-accounts.png" alt="Nabu Exchange Connect dialog showing the Private Key field and the Link Exchange button" width="624"></figure>

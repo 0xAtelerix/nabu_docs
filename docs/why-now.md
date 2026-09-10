@@ -13,14 +13,14 @@ LLMs drastically reduce the cost of expressing strategy hypotheses. They move th
 
 Most AI trading products today fall into two buckets:
 
-* Workflow glue optimized for slow automation, or
+* Workflow glue optimized for slow automation.
 * Unconstrained code generation that shifts debugging, safety, and operations to the user.
 
 Neither is designed for execution-grade arbitrage and multi-venue trading.
 
 Nabu is designed around a different premise: the winning products will be execution substrates that own data freshness, correctness, confidentiality, and operational reliability, and, therefore, unlock strategy classes that polling automation and DIY scripts cannot sustain.
 
-Nabu expands the AI frontier from low-stakes automation to execution-grade trading and arbitrage: low-latency cross-[DEX](glossary.md#dex) and DEX-[CEX](glossary.md#cex) strategies today, and perps, non-EVM, prediction markets and privacy-focused ecosystems as the platform expands.
+Nabu expands the AI frontier from low-stakes automation to execution-grade trading and arbitrage: low-latency cross-[DEX](glossary.md#dex) and DEX-[CEX](glossary.md#cex) strategies today, and perps, non-EVM, prediction markets, and privacy-focused ecosystems as the platform expands.
 
 Nabu is a response to the following theses:
 
@@ -30,4 +30,4 @@ Nabu is a response to the following theses:
 * Execution should be separated from strategy logic. Agent-to-agent composition allows intent-producing agents to specify outcomes, constraints, and acceptance checks in [PSL](glossary.md#psl); solver agents translate those PSL-bounded intents into executable transactions/orders across venues.
 * Deployed strategies are living artifacts: monitoring agents observe sealed receipts and realized PnL, detect drift/regime changes, and propose controlled updates (parameter changes, venue routing changes, tighter risk bounds). Updates are versioned and can be gated by simulation/competition-style evaluation before promotion.
 
-![Vision diagram](assets/images/image (8).png)
+![Custody and confidentiality map comparing public and confidential strategy logic across non-custodial, custodial, and hybrid custody models](assets/images/custody-confidentiality-map.png)

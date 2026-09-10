@@ -1,11 +1,11 @@
 (function () {
+  /* "Internal" here means "leave this link alone" — anchors, and any scheme
+     the browser handles itself (mailto:, tel:, javascript:) which must not be
+     forced into a new tab. */
   function isInternalLink(link) {
     var href = link.getAttribute("href");
-    if (!href || href.charAt(0) === "#" || href.indexOf("javascript:") === 0) {
+    if (!href || href.charAt(0) === "#") {
       return true;
-    }
-    if (href.indexOf("mailto:") === 0 || href.indexOf("tel:") === 0) {
-      return false;
     }
     try {
       var url = new URL(link.href, window.location.href);

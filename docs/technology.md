@@ -8,18 +8,18 @@ description: >-
 
 # Nabu technology
 
-### Pelagos and sequencing
+## Pelagos and sequencing
 
 * **Block time target:** ~250–360ms internal blocks, with optional centralized sequencing for specific performance modes.
 * **Consensus and consumption:** validators run full nodes for external chains and confirm blocks/receipts in a Directed Acyclic Graph (DAG)-based consensus; applications consume state diffs and receipts as a stream.
 
-### Confidential strategy execution (high level)
+## Confidential strategy execution (high level)
 
 * Strategy logic is encrypted to an epoch public key derived from the active validator set (via regular [DKG](glossary.md#dkg-distributed-key-generation)). Strategies are decrypted and executed only inside allowlisted [TEEs](glossary.md#tee), and signing of external transactions and requests is performed via threshold protocols. Execution produces outbound transactions/orders without a public linkage between a specific strategy and a specific outbound action.
 
 This allows creators to share performance and terms without exposing proprietary logic, enabling social trading and profit-sharing at scale.
 
-#### Visibility and trust boundaries
+### Visibility and trust boundaries
 
 | Artifact / Data                                               | User                                                                   | TEEs (confidential execution)                                            | Validators (DKG + [TSS](glossary.md#tss))                                 | Solvers (optional)                                       | Public chain / mempool                     | [CEX](glossary.md#cex) venue |
 | ------------------------------------------------------------- | ---------------------------------------------------------------------- | ------------------------------------------------------------------------ | ------------------------------------------------------------------------- | -------------------------------------------------------- | ------------------------------------------ | ---------------------------- |
@@ -33,18 +33,18 @@ This allows creators to share performance and terms without exposing proprietary
 | **Performance metrics** (PnL, drawdown, Sharpe, etc.)         | Full                                                                   | Computes/derives                                                         | No by default                                                             | No by default                                            | Not inherently                             | Not inherently               |
 | **Public performance envelope** (selectively disclosed)       | Optional publish                                                       | Can produce proof material                                               | Not required (unless attestation scheme)                                  | Not required                                             | Optional (only what user publishes)        | Optional                     |
 
-### CEX key model
+## CEX key model
 
-This section describes how CEX credentials are handled within the trust and visibility boundaries defined in the table defining the visibility and trust boundaries.
+This section describes how CEX credentials are handled within the trust and visibility boundaries set out in [Visibility and trust boundaries](#visibility-and-trust-boundaries).
 
 * For venues that support key import/compatible models, users import a corresponding public key; signing occurs via distributed threshold signing among TEEs (e.g., GG20/FROST-style flows).
 * For other venues, users encrypt their CEX API keys to the Pelagos epoch public key; execution uses enclave-only access and policy-bound usage.
 
-### Risk control catalog
+## Risk control catalog
 
-Nabu’s policy model implements execution-grade risk controls across multiple layers — strategy, account, and venue — reflecting established best practices in automated trading. The controls listed below present the full policy surface the system is [designed to support at v1](roadmap.md) for the subset of controls explicitly marked as designated for the MVP launch of Nabu.
+Nabu’s policy model implements execution-grade risk controls across multiple layers — strategy, account, and venue — reflecting established best practices in automated trading. The controls listed below present the full policy surface the system is [designed to support at v1](roadmap.md). The subset shipping at MVP launch is the venue allowlist and the kill switch; see the [roadmap](roadmap.md) for how the rest phase in.
 
-Trusted execution environments are relied on for confidentiality, integrity, and attestation, but are treated as fallible components rather than sources of availability guarantees.
+TEEs are relied on for confidentiality, integrity, and attestation, but are treated as fallible components rather than sources of availability guarantees.
 
 * Core exposure limits:
     * Max position size per asset; max gross/net exposure; concentration limits.
@@ -57,10 +57,10 @@ Trusted execution environments are relied on for confidentiality, integrity, and
     * Cooldowns after repeated failures or consecutive losses.
     * Latency watchdogs, heartbeat requirements, and timeouts.
 * Data sanity and manipulation resistance:
-    * Oracle deviation guards; stale-data checks; cross-source consistency checks
-    * Venue status checks (halts, degraded mode), circuit breakers
+    * Oracle deviation guards; stale-data checks; cross-source consistency checks.
+    * Venue status checks (halts, degraded mode); circuit breakers.
 * Operational controls:
-    * Kill switch (global and per-strategy); venue allowlists/denylists
-    * Key permission scoping; audit logs/receipts; emergency rotation procedures
+    * Kill switch (global and per-strategy); venue allowlists/denylists.
+    * Key permission scoping; audit logs/receipts; emergency rotation procedures.
 
 These controls track established industry practice for automated trading risk management (pre-trade checks, throttles, kill-switches, and volatility controls).

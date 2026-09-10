@@ -1,13 +1,13 @@
 ---
-title: 'The Solution: Nabu'
+title: 'The solution: Nabu'
 description: >-
   How Nabu addresses execution, verification, safety, and distribution as a
   single integrated system.
 ---
 
-# The Solution: Nabu
+# The solution: Nabu
 
-Nabu is built as an execution‑grade system that turns strategy ideas into verifiable, policy‑bound automation across crypto venues. This section details core components to the solutions such as the strategy design safeguards and the strategy lifecycle.
+Nabu is built as an execution-grade system that turns strategy ideas into verifiable, policy-bound automation across crypto venues. This section details the core components of that solution, such as the strategy design safeguards and the strategy lifecycle.
 
 ## Why the Pelagos Strategy Language?
 
@@ -23,16 +23,16 @@ Pelagos provides a canonical stream of records, state diffs, attested external e
 
 The following steps illustrate the full lifecycle of a strategy on Nabu:
 
-* Step 1 — **Strategize:** Create strategies via a chat-based interface (at launch, with a visual strategy editor on the roadmap).
+* Step 1 — **Strategize:** create strategies via a chat-based interface (at launch, with a visual strategy editor on the roadmap).
 * Step 2 — **Explore:** Nabu proposes multiple variants and parameterizations.
 * Step 3 — **Validate:** each variant compiles into PSL and must satisfy deterministic rules before anything is deployed.
 * Step 4 — **Constrain:** attach explicit policy, such as daily loss cap, max slippage, venue allowlists, and kill switch.
-* Step 5 — **Test:** first in research simulation mode, computing performance and risk metrics, and rank variants. Results are delivered as structured Telegram reports.
-* Step 7 — **Promote:** determine which variant to deploy. Strategies execute automatically on fresh canonical inputs with event-driven triggers.
-* Step 8 — **Iterate:** fork, version, and refine based on observed receipts, metrics, and failure analysis.
-* (Optional) Step 9 — **Share:** publish performance details and terms while keeping proprietary logic private.
+* Step 5 — **Test:** run each variant in research simulation mode, compute performance and risk metrics, and rank the results. Results are delivered as structured Telegram reports.
+* Step 6 — **Promote:** determine which variant to deploy. Strategies execute automatically on fresh canonical inputs with event-driven triggers.
+* Step 7 — **Iterate:** fork, version, and refine based on observed receipts, metrics, and failure analysis.
+* (Optional) Step 8 — **Share:** publish performance details and terms while keeping proprietary logic private.
 
-![Vision diagram](assets/images/image (4).png)
+![Strategy lifecycle: generate variants, verify them in PSL, deploy, simulate, observe outcomes, and iterate, with optional publishing](assets/images/strategy-lifecycle.png)
 
 ### Privacy guardrails
 
@@ -40,11 +40,11 @@ Throughout the strategy lifecycle, the user strategy is protected by Nabu’s gu
 
 Execution is driven by canonical state and event data aggregated by Pelagos across public blockchains and centralized exchanges. Resulting outbound actions — onchain transactions, [CEX](glossary.md#cex) orders, or abstract intents — are posted to public venues and logs as usual. After execution, sealed receipts and metrics are produced, enabling verifiable performance reporting with selective disclosure: users can share outcomes, constraints, and performance envelopes without revealing proprietary strategy logic.
 
-![Vision diagram](assets/images/image (5).png)
+![Confidential execution path: a prompt becomes PSL, passes semantic checks and a simulation gate, deploys encrypted into a confidential runtime, and produces sealed receipts](assets/images/confidential-execution-flow.png)
 
 ### Research simulation mode
 
-Nabu launches with a research-first simulation mode designed to validate strategies before any market risk is taken. Nabu simulates strategy actions against canonical market inputs spanning an Ethereum [DEX](glossary.md#dex) (Uniswap v2–style AMMs) and at least one centralized exchange, enabling realistic CEX ↔ DEX execution paths. The first version of the product focuses on simulated transactions and computed PnL; providing:
+Nabu launches with a research-first simulation mode designed to validate strategies before any market risk is taken. Nabu simulates strategy actions against canonical market inputs spanning an Ethereum [DEX](glossary.md#dex) (Uniswap v2-style AMMs) and at least one centralized exchange, enabling realistic CEX ↔ DEX execution paths. The first version of the product focuses on simulated transactions and computed PnL, providing:
 
 * **Outputs:** equity curve, trade list, and structured explanations of why trades occurred.
 * **Risk metrics:** volatility, drawdown, constraint hits.
@@ -69,13 +69,13 @@ Nabu is built for strategy classes where timing, data freshness, and operational
 
 * **Event-driven triggers:** avoids polling intervals as the dominant term in reaction time.
 * **Canonical inputs:** Pelagos provides a fresh, consistent stream of market-relevant inputs.
-* **Time-to-first-action:** At launch, Nabu targets ~250ms p50 from relevant event to outbound transaction/order request.
+* **Time-to-first-action:** at launch, Nabu targets ~250ms p50 from relevant event to outbound transaction/order request.
 
-![Vision diagram](assets/images/image (6).png)
+![Polling automation waits for the next interval before reacting, while Nabu’s canonical push stream triggers execution on the event itself](assets/images/event-driven-vs-polling.png)
 
 ### Intents, solvers, and agent-to-agent composition
 
-Strategies do not hardcode venue integrations. They emit either external transactions to chains or CEXes or standardized intents: declarative specifications of a desired outcome, solution boundaries (constraints), and acceptance checks. Intents are expressed in a constrained, verifiable language (e.g., PSL-bounded predicates) so producers can specify what must be true and solvers can search how to satisfy it within the allowed space.
+Strategies do not hardcode venue integrations. They emit either external transactions to chains or CEXs, or standardized intents: declarative specifications of a desired outcome, solution boundaries (constraints), and acceptance checks. Intents are expressed in a constrained, verifiable language (e.g., PSL-bounded predicates) so producers can specify what must be true and solvers can search how to satisfy it within the allowed space.
 
 Pelagos allows intent execution to be verifiable end-to-end. Constraints and acceptance predicates can reference canonical inputs (state diffs, receipts, finality, venue data) and are evaluated deterministically before execution (eligibility) and after execution (outcomes). The result is sealed receipts linking intent → plan → execution → outcome, so solvers can be judged on correctness and quality rather than trust.
 
@@ -83,7 +83,7 @@ Solvers are pluggable executors. Given an intent and the latest canonical state,
 
 Agent-to-agent composition uses the same interface. Producer agents (signal, risk, portfolio) express their needs precisely as PSL-bounded intents. Solver-side agents satisfy them by producing concrete execution plans that meet the acceptance checks. Monitoring agents can observe receipts, PnL, and propose controlled updates (e.g., parameter changes, tighter bounds, solver/venue switching), gated by simulation and policy.
 
-![Vision diagram](assets/images/image (7).png)
+![Producer agents emit PSL intents, solvers propose plans and quotes, the best plan executes, and Pelagos seals a receipt linking intent to outcome](assets/images/intents-and-solvers.png)
 
 ### Risk controls
 
@@ -91,14 +91,14 @@ Nabu treats risk controls as part of the strategy object: explicit, enforceable,
 
 At launch, Nabu offers the following controls:
 
-* Daily loss cap
-* Max slippage
-* Venue allowlist
-* Kill switch
+* Daily loss cap.
+* Max slippage.
+* Venue allowlist.
+* Kill switch.
 
-Additional standard controls are part of the [roadmap](roadmap.md); as detailed in the [risk control catalog](technology.md#risk-control-catalog) .
+Additional standard controls are part of the [roadmap](roadmap.md), as detailed in the [risk control catalog](technology.md#risk-control-catalog).
 
-## Social Layer
+## Social layer
 
 Nabu’s social layer is the information and coordination layer for strategies designed to become the single melting pot for crypto strategy operations.
 

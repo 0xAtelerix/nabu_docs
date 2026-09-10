@@ -4,12 +4,25 @@
  * ===========================================
  */
 
-/* Header: logo only, no site name text — keep title in layout as flex spacer */
+/* Header: logo only, no site name text — keep title in layout as flex spacer.
+   Clip the text instead of hiding it, so the site name stays in the
+   accessibility tree for screen readers. */
 .md-header__title {
-    visibility: hidden;
     flex-grow: 1;
     overflow: hidden;
     white-space: nowrap;
+}
+
+.md-header__title > .md-header__ellipsis {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
 }
 
 .md-header__button.md-logo img {
@@ -21,8 +34,15 @@
    1. GLOBAL HEADING STYLES
    ------------------------------------------ */
 
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 900 !important;
+/* Scoped to page content so theme chrome (nav, admonitions, TOC) keeps
+   its own weights. */
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6 {
+    font-weight: 900;
 }
 
 /* ------------------------------------------

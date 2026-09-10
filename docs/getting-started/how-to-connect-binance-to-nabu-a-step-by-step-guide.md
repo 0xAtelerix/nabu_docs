@@ -18,13 +18,13 @@ description: >-
 
 <figure><img src="../../assets/images/binance-step-2-link-accounts.png" alt="Nabu Link Accounts screen with Binance selected" width="624"></figure>
 
-## Step 2: Create your API Key on Binance
+## Step 2: Create your API key on Binance
 
-3\. Head to [binance.com/en/my/settings/api-management](https://www.binance.com/en/my/settings/api-management) and click on **Create API** to create your API Key.
+3\. Head to [binance.com/en/my/settings/api-management](https://www.binance.com/en/my/settings/api-management) and click on **Create API** to create your API key.
 
 <figure><img src="../../assets/images/binance-step-3-create-api.png" alt="Binance Create API button" width="624"></figure>
 
-4\. Once the API is created, save the API key and Secret and click on **Edit Restrictions**.
+4\. Once the API is created, save the API key and API secret, then click **Edit Restrictions**.
 
 5\. First, in the **IP access restrictions** field select **Restrict access to trusted IPs only (Recommended)** and use all of the IP addresses indicated below:
 
@@ -38,24 +38,26 @@ description: >-
 - `95.81.100.99`
 - `95.81.103.9`
 
-<figure><img src="../../assets/images/binance-step-6-ip-restrictions.png" alt="Binance IP access restrictions field" width="624"></figure>
+<figure><img src="../../assets/images/binance-step-5-ip-restrictions.png" alt="Binance IP access restrictions field" width="624"></figure>
 
 6\. For futures and spot, make sure that the following fields are ticked: **Enable Futures** and **Enable Spot & Margin & Stock Trading**.
 
-<figure><img src="../../assets/images/binance-step-4-permissions.png" alt="Binance API permission checkboxes for futures and spot" width="624"></figure>
+<figure><img src="../../assets/images/binance-step-6-permissions.png" alt="Binance API permission checkboxes for futures and spot" width="624"></figure>
 
-Note: for Futures make sure that you have your account set up and available funds.
+Note: for futures, make sure your Binance Futures account is set up and funded.
 
-<figure><img src="../../assets/images/binance-step-4-futures-note.png" alt="Binance futures account setup notice" width="466"></figure>
+<figure><img src="../../assets/images/binance-step-6-futures-note.png" alt="Binance futures account setup notice" width="466"></figure>
 
 7\. Tick the **Enable Symbol Whitelist** field and ensure to add assets that you would like to whitelist for trading purposes.
 
-<figure><img src="../../assets/images/binance-step-5-whitelist.png" alt="Binance Enable Symbol Whitelist settings" width="496"></figure>
+<figure><img src="../../assets/images/binance-step-7-whitelist.png" alt="Binance Enable Symbol Whitelist settings" width="496"></figure>
 
-8\. Once completed, save the changes and head back to [app.nabu.pro](https://app.nabu.pro).
+8\. Once completed, save the changes and head back to [app.nabu.pro](https://app.nabu.pro/).
 
 ## Step 3: Nabu exchange settings
 
-9\. Head back to the settings and enter your API Key and API Secret for Binance.
+9\. Head back to the settings, enter your API key and API secret into the **API Key** and **API Secret** fields, and click **Link Exchange**.
 
-<figure><img src="../../assets/images/binance-step-8-api-keys.png" alt="Nabu settings fields for Binance API Key and API Secret" width="624"></figure>
+10\. Binance now appears as a linked account in your Nabu settings.
+
+<figure><img src="../../assets/images/binance-step-9-api-keys.png" alt="Nabu settings showing Binance as a linked account with an Unlink action" width="624"></figure>

@@ -5,15 +5,15 @@ description: What Nabu is and how its execution-grade systems build, evaluate, a
 
 # Introduction
 
-Nabu is an AI-native platform that lets users build, test, deploy, and operate automated trading and arbitrage strategies across crypto venues without assembling infrastructure. The wedge is execution-grade trading and arbitrage across [DEXs](glossary.md#dex) and [CEXs](glossary.md#cex). The platform is built to generalize to arbitrage opportunities, yield farming, liquidity management, borrowing loops, claim-and-compound, airdrop farming workflows, cross-chain repositioning, perps, prediction markets, non-EVM, perpetuals and centralized ecosystems, and privacy-focused environments.
+Nabu is an AI-native platform that lets users build, test, deploy, and operate automated trading and arbitrage strategies across crypto venues without assembling infrastructure. The wedge is execution-grade trading and arbitrage across [DEXs](glossary.md#dex) and [CEXs](glossary.md#cex). The platform is built to generalize to arbitrage opportunities, yield farming, liquidity management, borrowing loops, claim-and-compound, airdrop farming workflows, cross-chain repositioning, perps, prediction markets, non-EVM and centralized ecosystems, and privacy-focused environments.
 
 Nabu defines a new category, the crypto strategy superapp: a single surface where users can run their entire playbook without jumping between wallets, bridges, dashboards, bots, and chat apps, and where strategy reality is visible, comparable, and discussable.
 
 This litepaper is written for:
 
-* Power users and strategists
-* Partners (venues, solvers, wallets, custodians, data providers)
-* Investors
+* Power users and strategists.
+* Partners (venues, solvers, wallets, custodians, and data providers).
+* Investors.
 
 ## TL;DR
 
@@ -31,7 +31,7 @@ It is built for execution: generate many strategy variants fast, verify them det
 
 Nabu is the flagship dApp on [Pelagos](https://docs.pelagos.network). Pelagos provides the decentralized execution substrate Nabu depends on: a validator-produced canonical stream of attested events, finality signals, state diffs, and records. This removes the need for bespoke infrastructure stacks and trusted backends by leveraging network-driven execution records that are consistent and auditable.
 
-Strategies compile into the Pelagos Specific Language ([PSL](glossary.md#psl)), a constrained and verifiable domain-specific language built for trading agents. PSL provides structured compiler feedback and enforces deterministic behavior, reducing LLM hallucination risk without slowing iteration.
+Strategies compile into the Pelagos Strategy Language ([PSL](glossary.md#psl)), a constrained and verifiable domain-specific language built for trading agents. PSL provides structured compiler feedback and enforces deterministic behavior, reducing LLM hallucination risk without slowing iteration.
 
 Strategies emit standardized intents, and solvers translate them into concrete execution across venues.
 
@@ -41,6 +41,6 @@ Nabu includes a social distribution layer, grounded in strategy reality. Strateg
 
 The home feed is a livestream of what’s working and what changed: new and trending strategies, major updates, performance shifts, risk events, and the discussions that matter.
 
-Strategy rooms attach conversation to versions and outcomes, keeping collaboration operational instead of noisy. While leaderboards reward strategies for shipping, adoption, TVL, and real volume each epoch.
+Strategy rooms attach conversation to versions and outcomes, keeping collaboration operational instead of noisy, while leaderboards reward strategies for shipping, adoption, TVL, and real volume each epoch.
 
-Nabu ships first for low-latency DEX and DEX–CEX automation, with expansion to perps, non-EVM, prediction markets, and privacy-focused ecosystems on the roadmap.
+Nabu ships first for low-latency DEX and DEX-CEX automation, with expansion to perps, non-EVM, prediction markets, and privacy-focused ecosystems on the roadmap.

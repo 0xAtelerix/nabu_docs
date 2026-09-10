@@ -7,7 +7,7 @@ description: >-
 
 # Vision
 
-The long-term shift is clear, crypto won’t be operated by humans clicking through ten interfaces. It will be operated by strategies. People will describe outcomes and constraints, and automation will do the repetitive work: monitoring, moving capital, executing actions, handling retries, and stopping safely when conditions break.
+The long-term shift is clear: crypto won’t be operated by humans clicking through ten interfaces. It will be operated by strategies. People will describe outcomes and constraints, and automation will do the repetitive work: monitoring, moving capital, executing actions, handling retries, and stopping safely when conditions break.
 
 Nabu is built for that world. Trading and arbitrage are the first wedge, but the superapp scope is broader: yield farming, liquidity management, borrow-and-loop, claim-and-compound, airdrop farming workflows, cross-chain repositioning, and any future strategy class that can be expressed as outcomes with limits. If a strategy needs to route funds, rotate venues, hedge exposure, claim rewards, rebalance, or unwind, it happens inside Nabu under explicit permissions and policy, with a clear record of what happened and why.
 
@@ -25,15 +25,15 @@ Nabu supports a strategy lifecycle that enables rapid iteration without sacrific
 
 ## System guarantees
 
-Nabu builds in privacy and control by design allowing strategies to remain private by default and execute under explicit policy constraints, including daily loss caps, maximum slippage, venue allowlists, and a kill switch.
+Nabu builds in privacy and control by design, allowing strategies to remain private by default and execute under explicit policy constraints, including daily loss caps, maximum slippage, venue allowlists, and a kill switch.
 
 ## A verifiable strategy language
 
-Strategies are expressed in the Pelagos Specific Language ([PSL](glossary.md#psl)), a constrained, deterministic strategy language with structured compiler feedback, enabling safe iteration without sacrificing speed.
+Strategies are expressed in the Pelagos Strategy Language ([PSL](glossary.md#psl)), a constrained, deterministic strategy language with structured compiler feedback, enabling safe iteration without sacrificing speed.
 
 ## Connected ecosystems
 
-Strategies are embedded directly to social coordination functions and tie directly to their outcomes: allowing strategy rooms to turn performance into distribution and coordination without noise. Strategy pages, live feeds, and rooms attach discussion to specific versions and results, with performance-based leaderboards surfacing what works.
+Strategies are embedded in social coordination functions and tie directly to their outcomes, allowing strategy rooms to turn performance into distribution and coordination without noise. Strategy pages, live feeds, and rooms attach discussion to specific versions and results, with performance-based leaderboards surfacing what works.
 
 ## Aligned distribution and incentives
 
@@ -50,4 +50,4 @@ Nabu’s business model is aligned with measurable execution, real usage, and st
 
 This model ensures that platform revenue scales with execution quality, strategy performance, and real economic activity, reinforcing Nabu’s flywheel rather than extracting value independently of user outcomes.
 
-![Vision diagram](assets/images/image (3).png)
+![Nabu platform loop: PSL-defined variants are simulated and ranked, the best is activated and executed, and observed outcomes feed the social layer and referrals](assets/images/nabu-platform-overview.png)

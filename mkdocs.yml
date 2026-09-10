@@ -13,7 +13,6 @@ theme:
     - search.suggest
     - search.highlight
     - content.tabs.link
-    - content.code.annotation
     - content.code.copy
     - content.code.annotate
   palette:
@@ -40,10 +39,10 @@ nav:
       - Introduction: index.md
       - Vision: vision.md
       - Why now?: why-now.md
-  - 🧠 The Challenge:
+  - 🧠 The challenge:
       - The challenge: challenge.md
-  - ✅ The Solution:
-      - "The Solution: Nabu": solution.md
+  - ✅ The solution:
+      - "The solution: Nabu": solution.md
       - Strategy flywheel: flywheel.md
       - Ecosystem & economics: ecosystems.md
   - 🛠️ Nabu technology:
@@ -52,11 +51,31 @@ nav:
   - 🏃‍♂️ Getting started:
       - Connect Hyperliquid: getting-started/how-to-connect-hyperliquid-to-nabu-a-step-by-step-guide.md
       - Connect Binance: getting-started/how-to-connect-binance-to-nabu-a-step-by-step-guide.md
-  - 💡 Knowledge Base:
+  - 💡 Knowledge base:
       - Glossary: glossary.md
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      permalink_title: Link to this section
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
 
 plugins:
   - search
-  - tags
 extra_javascript:
   - assets/javascripts/extra.js
