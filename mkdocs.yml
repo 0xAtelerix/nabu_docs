@@ -49,6 +49,7 @@ nav:
       - Roadmap: roadmap.md
       - Nabu technology: technology.md
   - 🏃‍♂️ Getting started:
+      - Overview: getting-started/index.md
       - Connect Hyperliquid: getting-started/how-to-connect-hyperliquid-to-nabu-a-step-by-step-guide.md
       - Connect Binance: getting-started/how-to-connect-binance-to-nabu-a-step-by-step-guide.md
   - 💡 Knowledge base:
