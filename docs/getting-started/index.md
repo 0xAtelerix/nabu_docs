@@ -14,7 +14,7 @@ Pick the venue you want to trade on and follow its guide.
 - [Connect Hyperliquid](how-to-connect-hyperliquid-to-nabu-a-step-by-step-guide.md): export the private key of your Nabu wallet from Privy, fund the account, and paste the key into Nabu.
 - [Connect Binance](how-to-connect-binance-to-nabu-a-step-by-step-guide.md): create an API key with the right permissions, symbol whitelist, and IP restrictions, then link it in Nabu.
 
-Both guides start the same way, in the settings menu at [app.nabu.pro](https://app.nabu.pro/).
+Both guides start the same way, on the **Connect** tab of your Nabu settings at [app.nabu.pro/?settings=connect](https://app.nabu.pro/?settings=connect).
 
 ## Before you start
 

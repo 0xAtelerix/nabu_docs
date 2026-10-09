@@ -42,13 +42,14 @@ This section describes how CEX credentials are handled within the trust and visi
 
 ## Risk control catalog
 
-Nabu’s policy model implements execution-grade risk controls across multiple layers — strategy, account, and venue — reflecting established best practices in automated trading. The controls listed below present the full policy surface the system is [designed to support at v1](roadmap.md). The subset shipping at MVP launch is the venue allowlist and the kill switch; see the [roadmap](roadmap.md) for how the rest phase in.
+Nabu’s policy model implements execution-grade risk controls across multiple layers — strategy, account, and venue — reflecting established best practices in automated trading. The controls listed below present the full policy surface the system is [designed to support at v1](roadmap.md). The subset shipping at MVP launch is the daily loss cap, max slippage, venue allowlist, and kill switch; see the [roadmap](roadmap.md) for how the rest phase in.
 
 TEEs are relied on for confidentiality, integrity, and attestation, but are treated as fallible components rather than sources of availability guarantees.
 
 * Core exposure limits:
     * Max position size per asset; max gross/net exposure; concentration limits.
     * Max leverage and margin utilization (derivatives).
+    * Daily loss cap per strategy and per account.
 * Pre-trade validations:
     * Order size caps; notional caps; price collars / price band checks; fat-finger protection.
     * Slippage ceilings; minimum liquidity checks; gas/fee ceilings (where applicable).

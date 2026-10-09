@@ -10,13 +10,11 @@ description: >-
 
 ## Step 1: Start the connection in Nabu
 
-1\. Go to [app.nabu.pro](https://app.nabu.pro/) and click on the cogwheel next to your username.
+1\. Go to [app.nabu.pro/?settings=connect](https://app.nabu.pro/?settings=connect). This opens the **Connect** tab of your Nabu settings.
 
-<figure><img src="../../assets/images/hyperliquid-step-1-cogwheel.png" alt="Nabu header with the settings cogwheel next to the username" width="442"></figure>
+<figure><img src="../../assets/images/settings-connect.jpg" alt="Nabu settings with the Connect tab open, showing the Exchange Connect form with the Connect Exchange Account selector and the Link Exchange button" width="480"></figure>
 
-2\. Proceed to **Link Accounts**, and select **Hyperliquid**.
-
-<figure><img src="../../assets/images/hyperliquid-step-2-link-accounts.png" alt="Nabu Link Accounts screen with Hyperliquid selected" width="624"></figure>
+2\. Under **Connect Exchange Account**, select **Hyperliquid**.
 
 ## Step 2: Export your private key from Privy
 
@@ -60,6 +58,10 @@ description: >-
 
 <figure><img src="../../assets/images/hyperliquid-step-12-account-details.png" alt="Account menu for the imported wallet account, with Account details highlighted" width="261"></figure>
 
-13\. Copy your **private key**, return to the Nabu settings page, paste it into the **Private Key** field, and click **Link Exchange**.
+13\. Copy your **private key** and return to the **Connect** tab at [app.nabu.pro/?settings=connect](https://app.nabu.pro/?settings=connect). With **Hyperliquid** selected under **Connect Exchange Account**, paste the key into the **Private Key** field. Check that the **Wallet address** shown below the field matches your imported account, then click **Link Exchange**.
 
-<figure><img src="../../assets/images/hyperliquid-step-2-link-accounts.png" alt="Nabu Exchange Connect dialog showing the Private Key field and the Link Exchange button" width="624"></figure>
+<figure><img src="../../assets/images/hyperliquid-step-13-private-key.jpg" alt="Connect Exchange Account form with Hyperliquid selected, a masked private key, the derived wallet address, and the Link Exchange button" width="450"></figure>
+
+14\. Hyperliquid now appears under **Connected** with a green status indicator and your wallet address.
+
+<figure><img src="../../assets/images/hyperliquid-step-14-connected.jpg" alt="Connected list showing Hyperliquid with a green status indicator, the wallet address, and a remove action" width="450"></figure>

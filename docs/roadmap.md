@@ -22,7 +22,7 @@ The following table depicts what is shipping at launch and details some of the f
 | Agent competition  | Basic multi-variant generation + ranking                                 | Competition ladder: promote best, iterate mid, drop worst + rewards | Competition leagues by strategy class + team competition    | Permissionless agent marketplace + onchain attestations of competition performance |
 | Social layer       | Strategy pages (basic), Feed                                             | Performance details (selective disclosure)                          | Profit share, topic rooms, DMs, private org spaces          | Full creator marketplace                                                            |
 | Growth / Referrals | Referral links                                                           | Activation-gated referrals + rewards + anti-abuse                   | Tiered rewards + team/org invites + partner referral tracks | Creator/affiliate revenue share + ecosystem programs                                |
-| Safety controls    | Allowlist + kill switch                                                  | + daily loss cap, max slippage                                      | Expanded risk suite                                         | Institutional policy packs                                                          |
+| Safety controls    | Daily loss cap, max slippage, allowlist + kill switch                    | —                                                                   | Expanded risk suite                                         | Institutional policy packs                                                          |
 
 See the [risk control catalog](technology.md#risk-control-catalog) for the full policy surface.
 

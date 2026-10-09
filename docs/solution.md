@@ -32,7 +32,7 @@ The following steps illustrate the full lifecycle of a strategy on Nabu:
 * Step 7 — **Iterate:** fork, version, and refine based on observed receipts, metrics, and failure analysis.
 * (Optional) Step 8 — **Share:** publish performance details and terms while keeping proprietary logic private.
 
-![Strategy lifecycle: generate variants, verify them in PSL, deploy, simulate, observe outcomes, and iterate, with optional publishing](assets/images/strategy-lifecycle.png)
+![Strategy lifecycle: generate variants, verify them in PSL, simulate, deploy, observe outcomes, and iterate, with optional publishing](assets/images/strategy-lifecycle.png)
 
 ### Privacy guardrails
 

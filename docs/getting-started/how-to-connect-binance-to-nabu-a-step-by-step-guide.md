@@ -10,13 +10,13 @@ description: >-
 
 ## Step 1: Start the connection in Nabu
 
-1\. Go to [app.nabu.pro](https://app.nabu.pro/) and click on the cogwheel next to your username.
+1\. Go to [app.nabu.pro/?settings=connect](https://app.nabu.pro/?settings=connect). This opens the **Connect** tab of your Nabu settings.
 
-<figure><img src="../../assets/images/hyperliquid-step-1-cogwheel.png" alt="Nabu header with the settings cogwheel next to the username" width="442"></figure>
+<figure><img src="../../assets/images/settings-connect.jpg" alt="Nabu settings with the Connect tab open, showing the Exchange Connect form with the Connect Exchange Account selector and the Link Exchange button" width="480"></figure>
 
-2\. Proceed to **Link Accounts**, and select **Binance**.
+2\. Under **Connect Exchange Account**, select **Binance**.
 
-<figure><img src="../../assets/images/binance-step-2-link-accounts.png" alt="Nabu Link Accounts screen with Binance selected" width="624"></figure>
+<figure><img src="../../assets/images/binance-step-2-connect.jpg" alt="Connect Exchange Account form with Binance selected, showing the API Key and API Secret fields and the Link Exchange button" width="450"></figure>
 
 ## Step 2: Create your API key on Binance
 
@@ -70,12 +70,12 @@ Note: for futures, make sure your Binance Futures account is set up and funded.
 
 <figure><img src="../../assets/images/binance-step-7-whitelist.png" alt="Binance Enable Symbol Whitelist settings" width="496"></figure>
 
-8\. Once completed, save the changes and head back to [app.nabu.pro](https://app.nabu.pro/).
+8\. Once completed, save the changes.
 
 ## Step 3: Nabu exchange settings
 
-9\. Head back to the settings, enter your API key and API secret into the **API Key** and **API Secret** fields, and click **Link Exchange**.
+9\. Return to the **Connect** tab at [app.nabu.pro/?settings=connect](https://app.nabu.pro/?settings=connect). With **Binance** selected under **Connect Exchange Account**, paste your API key and API secret into the **API Key** and **API Secret** fields, and click **Link Exchange**.
 
-10\. Binance now appears as a linked account in your Nabu settings.
+10\. Binance now appears under **Connected** with a green status indicator.
 
-<figure><img src="../../assets/images/binance-step-9-api-keys.png" alt="Nabu settings showing Binance as a linked account with an Unlink action" width="624"></figure>
+<figure><img src="../../assets/images/binance-step-10-connected.jpg" alt="Connected list showing Binance with a green status indicator and a remove action" width="450"></figure>
