@@ -200,3 +200,100 @@
     );
   }
 })();
+
+/* Support request form (support/request.md): preselect the topic from
+   ?topic=, and send the form in the background to
+   FormSubmit's AJAX endpoint so visitors never leave the page. Without JS the
+   form still posts normally and FormSubmit redirects back with ?sent=1. */
+(function () {
+  function setUpRequestForm() {
+    var form = document.getElementById('nabu-request');
+    if (!form || form.dataset.nabuReady) return;
+    form.dataset.nabuReady = '1';
+
+    var sent = document.getElementById('nabu-request-sent');
+    var failed = document.getElementById('nabu-request-failed');
+    var button = form.querySelector('button[type="submit"]');
+    var params = new URLSearchParams(window.location.search);
+
+    /* Success view: retitle the page and keep only the confirmation. */
+    function showSent() {
+      var heading = document.querySelector('.md-content h1');
+      if (heading) heading.firstChild.textContent = 'Request sent';
+      document.title = document.title.replace('Submit a request', 'Request sent');
+      form.hidden = true;
+      document.querySelectorAll('.nabu-request-extra').forEach(function (el) {
+        el.hidden = true;
+      });
+      sent.hidden = false;
+    }
+
+    if (params.get('sent') === '1') {
+      showSent();
+    }
+
+    var topic = form.elements.topic;
+    var preset = params.get('topic');
+    if (preset) {
+      var option = topic.querySelector('option[data-topic="' + preset + '"]');
+      if (option) option.selected = true;
+    }
+
+    var next = new URL(window.location.href);
+    next.search = '?sent=1';
+    next.hash = '';
+    form.elements._next.value = next.href;
+
+    function setBusy(busy) {
+      button.disabled = busy;
+      button.classList.toggle('is-loading', busy);
+      button.setAttribute('aria-busy', busy ? 'true' : 'false');
+    }
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      if (button.disabled) return;
+
+      form.elements._subject.value =
+        'Nabu support: ' + topic.value + ' - ' + form.elements.subject.value;
+
+      sent.hidden = true;
+      failed.hidden = true;
+      setBusy(true);
+
+      /* https://formsubmit.co/<target> -> https://formsubmit.co/ajax/<target> */
+      var endpoint = form.action.replace('formsubmit.co/', 'formsubmit.co/ajax/');
+
+      fetch(endpoint, {
+        method: 'POST',
+        headers: { Accept: 'application/json' },
+        body: new FormData(form)
+      })
+        .then(function (response) {
+          return response.json().then(function (data) {
+            if (!response.ok || String(data.success) !== 'true') {
+              throw new Error(data.message || 'HTTP ' + response.status);
+            }
+          });
+        })
+        .then(function () {
+          form.reset();
+          showSent();
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        })
+        .catch(function () {
+          failed.hidden = false;
+          failed.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        })
+        .then(function () {
+          setBusy(false);
+        });
+    });
+  }
+
+  if (typeof document$ !== 'undefined' && document$.subscribe) {
+    document$.subscribe(setUpRequestForm);
+  } else {
+    document.addEventListener('DOMContentLoaded', setUpRequestForm);
+  }
+})();

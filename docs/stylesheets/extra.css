@@ -123,3 +123,151 @@
     visibility: visible !important;
   }
 }
+
+/* ------------------------------------------
+   3. "NEW" PAGE STATUS (front matter: status: new)
+   ------------------------------------------ */
+
+/* Text badge instead of Material's sparkle icon. */
+.md-nav .md-status--new::after {
+    content: "NEW";
+    -webkit-mask-image: none;
+    mask-image: none;
+    width: auto;
+    height: auto;
+    margin-left: 0.3em;
+    padding: 0.1em 0.35em;
+    border-radius: 0.15em;
+    background-color: var(--md-accent-fg-color);
+    color: var(--md-accent-bg-color);
+    font-size: 0.55rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    line-height: 1.4;
+    vertical-align: middle;
+}
+
+.md-nav .md-status--new:hover::after {
+    background-color: var(--md-accent-fg-color);
+}
+
+/* ------------------------------------------
+   4. SUPPORT REQUEST FORM (support/request.md)
+   ------------------------------------------ */
+
+.nabu-request {
+    display: grid;
+    gap: 1rem;
+    margin: 1.5em 0;
+    padding: 1.2rem;
+    border: 0.05rem solid var(--md-default-fg-color--lightest);
+    border-radius: 0.2rem;
+}
+
+.nabu-request__row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    gap: 1rem;
+}
+
+.nabu-request__field {
+    display: grid;
+    gap: 0.35rem;
+}
+
+.nabu-request__field > span {
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+.nabu-request__field abbr {
+    color: var(--md-accent-fg-color);
+    text-decoration: none;
+    border: none;
+}
+
+.nabu-request__field small {
+    color: var(--md-default-fg-color--light);
+}
+
+.nabu-request input,
+.nabu-request select,
+.nabu-request textarea {
+    width: 100%;
+    padding: 0.5em 0.6em;
+    border: 0.05rem solid var(--md-default-fg-color--lighter);
+    border-radius: 0.1rem;
+    background-color: var(--md-default-bg-color);
+    color: var(--md-default-fg-color);
+    font: inherit;
+}
+
+.nabu-request textarea {
+    resize: vertical;
+}
+
+.nabu-request input:focus,
+.nabu-request select:focus,
+.nabu-request textarea:focus {
+    outline: none;
+    border-color: var(--md-accent-fg-color);
+}
+
+.nabu-request .md-button {
+    justify-self: start;
+    margin: 0;
+    cursor: pointer;
+}
+
+/* Spam trap for FormSubmit: real visitors never see or fill it. */
+.nabu-request__honey {
+    display: none !important;
+}
+
+/* Material's admonition display rule would override the hidden attribute. */
+.nabu-request-sent[hidden],
+.nabu-request-extra[hidden],
+.nabu-request[hidden] {
+    display: none;
+}
+
+/* Submit button: spinner and locked state while the request is sending. */
+.md-typeset .nabu-request .nabu-request__submit {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6em;
+}
+
+.nabu-request__spinner {
+    display: none;
+    width: 1em;
+    height: 1em;
+    border: 0.15em solid currentcolor;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: nabu-spin 0.7s linear infinite;
+}
+
+.nabu-request__submit.is-loading .nabu-request__spinner {
+    display: inline-block;
+}
+
+.nabu-request .md-button:disabled {
+    opacity: 0.7;
+    cursor: wait;
+}
+
+.nabu-request .md-button:disabled:hover {
+    background-color: var(--md-primary-fg-color);
+    border-color: var(--md-primary-fg-color);
+}
+
+@keyframes nabu-spin {
+    to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .nabu-request__spinner {
+        animation-duration: 2s;
+    }
+}
