@@ -20,10 +20,10 @@ Tell us what happened and we reply by email within two business days. Check the 
   <p>Something went wrong. Check your connection and try again. If it keeps failing, ask in <a href="https://t.me/nabupro">Nabu Official on Telegram</a>.</p>
 </div>
 
-<form class="nabu-request" id="nabu-request" action="https://formsubmit.co/konstantin@pelagos.network" method="POST">
+<form class="nabu-request" id="nabu-request" action="https://formsubmit.co/contact@pelagos.network" method="POST">
   <input type="hidden" name="_subject" value="Nabu support request">
   <input type="hidden" name="_template" value="table">
-  <input type="hidden" name="_cc" value="paradoxnumber7@gmail.com">
+  <input type="hidden" name="_cc" value="nicky@pelagos.network,raul@pelagos.network,konstantin@pelagos.network">
   <input type="hidden" name="_next" value="https://docs.nabu.pro/support/request/?sent=1">
   <input type="text" name="_honey" class="nabu-request__honey" tabindex="-1" autocomplete="off" aria-hidden="true">
 
