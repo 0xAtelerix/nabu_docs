@@ -37,6 +37,9 @@ theme:
 
 extra_css:
   - stylesheets/extra.css
+extra:
+  status:
+    new: Recently added
 nav:
   - 🧭 Start here:
       - Introduction: index.md
@@ -57,6 +60,9 @@ nav:
       - Connect Binance: getting-started/how-to-connect-binance-to-nabu-a-step-by-step-guide.md
   - 💡 Knowledge base:
       - Glossary: glossary.md
+  - 🛟 Support:
+      - Support guide: support/index.md
+      - Submit a request: support/request.md
 
 markdown_extensions:
   - abbr
