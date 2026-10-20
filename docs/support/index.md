@@ -1,7 +1,6 @@
 ---
 title: Support guide
 description: How to get help with Nabu, what to check before you open a request, and the official Nabu links.
-status: new
 ---
 
 # Get help with Nabu

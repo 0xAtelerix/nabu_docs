@@ -125,33 +125,6 @@
 }
 
 /* ------------------------------------------
-   3. "NEW" PAGE STATUS (front matter: status: new)
-   ------------------------------------------ */
-
-/* Text badge instead of Material's sparkle icon. */
-.md-nav .md-status--new::after {
-    content: "NEW";
-    -webkit-mask-image: none;
-    mask-image: none;
-    width: auto;
-    height: auto;
-    margin-left: 0.3em;
-    padding: 0.1em 0.35em;
-    border-radius: 0.15em;
-    background-color: var(--md-accent-fg-color);
-    color: var(--md-accent-bg-color);
-    font-size: 0.55rem;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    line-height: 1.4;
-    vertical-align: middle;
-}
-
-.md-nav .md-status--new:hover::after {
-    background-color: var(--md-accent-fg-color);
-}
-
-/* ------------------------------------------
    4. SUPPORT REQUEST FORM (support/request.md)
    ------------------------------------------ */
 

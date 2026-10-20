@@ -34,9 +34,6 @@ theme:
 
 extra_css:
   - stylesheets/extra.css
-extra:
-  status:
-    new: Recently added
 nav:
   - 🧭 Start here:
       - Introduction: index.md

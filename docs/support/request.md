@@ -1,7 +1,6 @@
 ---
 title: Submit a request
 description: Send the Nabu team a support request. We reply by email within two business days.
-status: new
 ---
 
 # Submit a request
